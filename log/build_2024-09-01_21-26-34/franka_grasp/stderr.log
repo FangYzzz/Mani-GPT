@@ -1,0 +1,32 @@
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In constructor ‘[01m[KGraspSubscriber::GraspSubscriber()[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:18:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktranslation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   18 |       std::array<double, 3> [01;35m[Ktranslation[m[K = {1,1,1};
+      |                             [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:19:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krotation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   19 |       std::array<double, 4> [01;35m[Krotation[m[K = {1,1,1,1};
+      |                             [01;35m[K^~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In lambda function:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:107:44:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kstd::array<double, 16>[m[K’ and ‘[01m[Kconst std::array<double, 7>[m[K’)
+  107 |             initial_position = robot_state.[01;31m[Kq_d[m[K;
+      |                                            [01;31m[K^~~[m[K
+In file included from [01m[K/usr/include/franka/control_types.h:5[m[K,
+                 from [01m[K/usr/include/franka/log.h:7[m[K,
+                 from [01m[K/usr/include/franka/exception.h:8[m[K,
+                 from [01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:3[m[K:
+[01m[K/usr/include/c++/11/array:95:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<double, 16>& std::array<double, 16>::operator=(const std::array<double, 16>&)[m[K’
+   95 |     struct [01;36m[Karray[m[K
+      |            [01;36m[K^~~~~[m[K
+[01m[K/usr/include/c++/11/array:95:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst std::array<double, 7>[m[K’ to ‘[01m[Kconst std::array<double, 16>&[m[K’
+[01m[K/usr/include/c++/11/array:95:12:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr std::array<double, 16>& std::array<double, 16>::operator=(std::array<double, 16>&&)[m[K’
+[01m[K/usr/include/c++/11/array:95:12:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst std::array<double, 7>[m[K’ to ‘[01m[Kstd::array<double, 16>&&[m[K’
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In member function ‘[01m[Kint GraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktranslation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   22 |     int grasp([01;35m[Kstd::array<double, 3> translation[m[K, std::array<double, 4> rotation) {
+      |               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krotation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   22 | rasp(std::array<double, 3> translation, [01;35m[Kstd::array<double, 4> rotation[m[K) {
+      |                                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/grasp.dir/build.make:76: CMakeFiles/grasp.dir/src/grasp.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/grasp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

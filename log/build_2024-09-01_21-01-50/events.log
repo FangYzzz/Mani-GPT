@@ -1,0 +1,772 @@
+[0.000000] (-) TimerEvent: {}
+[0.000149] (grasp_msg) JobQueued: {'identifier': 'grasp_msg', 'dependencies': OrderedDict()}
+[0.000241] (franka_grasp) JobQueued: {'identifier': 'franka_grasp', 'dependencies': OrderedDict([('grasp_msg', '/home/yuan/mani_gpt/install/grasp_msg')])}
+[0.000383] (grasp_publisher) JobQueued: {'identifier': 'grasp_publisher', 'dependencies': OrderedDict([('grasp_msg', '/home/yuan/mani_gpt/install/grasp_msg')])}
+[0.000480] (grasp_msg) JobStarted: {'identifier': 'grasp_msg'}
+[0.006670] (grasp_msg) JobProgress: {'identifier': 'grasp_msg', 'progress': 'cmake'}
+[0.007141] (grasp_msg) JobProgress: {'identifier': 'grasp_msg', 'progress': 'build'}
+[0.007569] (grasp_msg) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/yuan/mani_gpt/build/grasp_msg', '--', '-j16', '-l16'], 'cwd': '/home/yuan/mani_gpt/build/grasp_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'yuan'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/yuan/mani_gpt/install/grasp_msg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/yuan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('SYSTEMD_EXEC_PID', '1386500'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1011/bus'), ('IGNORE_PREEMPT_RT_PRESENCE', '1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/yuan/mani_gpt/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'yuan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'yuan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '4'), ('PATH', '/opt/ros/humble/bin:/home/yuan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aegina:@/tmp/.ICE-unix/1380215,unix/aegina:/tmp/.ICE-unix/1380215'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b3d64fcb_11eb_4744_bb76_b949c2de00ce'), ('XDG_RUNTIME_DIR', '/run/user/1011'), ('DISPLAY', ':3'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1011/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.124'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1011/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/yuan/mani_gpt/install/grasp_publisher:/home/yuan/mani_gpt/install/franka_grasp:/home/yuan/mani_gpt/install/grasp_msg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1011/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/yuan/mani_gpt/build/grasp_msg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages:/home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/yuan/mani_gpt/install/franka_grasp:/home/yuan/mani_gpt/install/grasp_msg:/home/yuan/mani_gpt/install/grasp_publisher:/opt/ros/humble')]), 'shell': False}
+[0.049649] (grasp_msg) StdoutLine: {'line': b'[  6%] Built target grasp_msg__cpp\n'}
+[0.049977] (grasp_msg) StdoutLine: {'line': b'[ 12%] Built target grasp_msg__rosidl_generator_c\n'}
+[0.057940] (grasp_msg) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_grasp_msg\n'}
+[0.070879] (grasp_msg) StdoutLine: {'line': b'[ 22%] Built target grasp_msg__rosidl_typesupport_fastrtps_cpp\n'}
+[0.081499] (grasp_msg) StdoutLine: {'line': b'[ 32%] Built target grasp_msg__rosidl_typesupport_cpp\n'}
+[0.085337] (grasp_msg) StdoutLine: {'line': b'[ 41%] Built target grasp_msg__rosidl_typesupport_introspection_cpp\n'}
+[0.090022] (grasp_msg) StdoutLine: {'line': b'[ 51%] Built target grasp_msg__rosidl_typesupport_introspection_c\n'}
+[0.091197] (grasp_msg) StdoutLine: {'line': b'[ 70%] Built target grasp_msg__rosidl_typesupport_c\n'}
+[0.091331] (grasp_msg) StdoutLine: {'line': b'[ 70%] Built target grasp_msg__rosidl_typesupport_fastrtps_c\n'}
+[0.099766] (-) TimerEvent: {}
+[0.106703] (grasp_msg) StdoutLine: {'line': b'[ 70%] Built target grasp_msg\n'}
+[0.122334] (grasp_msg) StdoutLine: {'line': b'[ 74%] Built target grasp_msg__py\n'}
+[0.139021] (grasp_msg) StdoutLine: {'line': b'[ 80%] Built target grasp_msg__rosidl_generator_py\n'}
+[0.157254] (grasp_msg) StdoutLine: {'line': b'[100%] Built target grasp_msg__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.157427] (grasp_msg) StdoutLine: {'line': b'[100%] Built target grasp_msg__rosidl_typesupport_introspection_c__pyext\n'}
+[0.157492] (grasp_msg) StdoutLine: {'line': b'[100%] Built target grasp_msg__rosidl_typesupport_c__pyext\n'}
+[0.199869] (-) TimerEvent: {}
+[0.300110] (-) TimerEvent: {}
+[0.328512] (grasp_msg) StdoutLine: {'line': b'running egg_info\n'}
+[0.329766] (grasp_msg) StdoutLine: {'line': b'writing grasp_msg.egg-info/PKG-INFO\n'}
+[0.329956] (grasp_msg) StdoutLine: {'line': b'writing dependency_links to grasp_msg.egg-info/dependency_links.txt\n'}
+[0.330092] (grasp_msg) StdoutLine: {'line': b'writing top-level names to grasp_msg.egg-info/top_level.txt\n'}
+[0.332090] (grasp_msg) StdoutLine: {'line': b"reading manifest file 'grasp_msg.egg-info/SOURCES.txt'\n"}
+[0.332469] (grasp_msg) StdoutLine: {'line': b"writing manifest file 'grasp_msg.egg-info/SOURCES.txt'\n"}
+[0.355936] (grasp_msg) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_grasp_msg_egg\n'}
+[0.364648] (grasp_msg) CommandEnded: {'returncode': 0}
+[0.400189] (-) TimerEvent: {}
+[0.409619] (grasp_msg) JobProgress: {'identifier': 'grasp_msg', 'progress': 'install'}
+[0.416820] (grasp_msg) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/yuan/mani_gpt/build/grasp_msg'], 'cwd': '/home/yuan/mani_gpt/build/grasp_msg', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'yuan'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/yuan/mani_gpt/install/grasp_msg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/yuan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('SYSTEMD_EXEC_PID', '1386500'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1011/bus'), ('IGNORE_PREEMPT_RT_PRESENCE', '1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/yuan/mani_gpt/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'yuan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'yuan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '4'), ('PATH', '/opt/ros/humble/bin:/home/yuan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aegina:@/tmp/.ICE-unix/1380215,unix/aegina:/tmp/.ICE-unix/1380215'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b3d64fcb_11eb_4744_bb76_b949c2de00ce'), ('XDG_RUNTIME_DIR', '/run/user/1011'), ('DISPLAY', ':3'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1011/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.124'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1011/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/yuan/mani_gpt/install/grasp_publisher:/home/yuan/mani_gpt/install/franka_grasp:/home/yuan/mani_gpt/install/grasp_msg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1011/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/yuan/mani_gpt/build/grasp_msg'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages:/home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/yuan/mani_gpt/install/franka_grasp:/home/yuan/mani_gpt/install/grasp_msg:/home/yuan/mani_gpt/install/grasp_publisher:/opt/ros/humble')]), 'shell': False}
+[0.423509] (grasp_msg) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.423681] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/ament_index/resource_index/rosidl_interfaces/grasp_msg\n'}
+[0.423764] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg\n'}
+[0.423870] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg\n'}
+[0.423992] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/grasp_message.h\n'}
+[0.424055] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.424097] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail\n'}
+[0.424138] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__functions.c\n'}
+[0.424199] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__struct.h\n'}
+[0.424239] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__functions.h\n'}
+[0.424276] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__type_support.h\n'}
+[0.424339] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/environment/library_path.sh\n'}
+[0.424425] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/environment/library_path.dsv\n'}
+[0.424482] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/lib/libgrasp_msg__rosidl_generator_c.so\n'}
+[0.424520] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg\n'}
+[0.424576] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg\n'}
+[0.424621] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.424659] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail\n'}
+[0.424738] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__rosidl_typesupport_fastrtps_c.h\n'}
+[0.424830] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/lib/libgrasp_msg__rosidl_typesupport_fastrtps_c.so\n'}
+[0.424872] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg\n'}
+[0.424911] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg\n'}
+[0.424960] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.424998] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail\n'}
+[0.425043] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__rosidl_typesupport_introspection_c.h\n'}
+[0.425080] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__type_support.c\n'}
+[0.425130] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/lib/libgrasp_msg__rosidl_typesupport_introspection_c.so\n'}
+[0.425168] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/lib/libgrasp_msg__rosidl_typesupport_c.so\n'}
+[0.425222] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg\n'}
+[0.425287] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg\n'}
+[0.425345] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/grasp_message.hpp\n'}
+[0.425402] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail\n'}
+[0.425461] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__builder.hpp\n'}
+[0.425517] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__struct.hpp\n'}
+[0.425564] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__traits.hpp\n'}
+[0.425614] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg\n'}
+[0.425651] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg\n'}
+[0.425687] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail\n'}
+[0.425736] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/dds_fastrtps\n'}
+[0.425773] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.425820] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.425869] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/lib/libgrasp_msg__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.425927] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg\n'}
+[0.425976] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg\n'}
+[0.426013] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail\n'}
+[0.426050] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__type_support.cpp\n'}
+[0.426099] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/include/grasp_msg/grasp_msg/msg/detail/grasp_message__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.426136] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/lib/libgrasp_msg__rosidl_typesupport_introspection_cpp.so\n'}
+[0.426250] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/lib/libgrasp_msg__rosidl_typesupport_cpp.so\n'}
+[0.426389] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/environment/pythonpath.sh\n'}
+[0.426491] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/environment/pythonpath.dsv\n'}
+[0.426552] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg-0.0.0-py3.10.egg-info\n'}
+[0.426592] (grasp_msg) StdoutLine: {'line': b'-- Installing: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.426690] (grasp_msg) StdoutLine: {'line': b'-- Installing: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.427255] (grasp_msg) StdoutLine: {'line': b'-- Installing: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.427367] (grasp_msg) StdoutLine: {'line': b'-- Installing: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.427429] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg\n'}
+[0.427468] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/msg\n'}
+[0.427508] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/msg/_grasp_message_s.c\n'}
+[0.427545] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/msg/_grasp_message.py\n'}
+[0.427582] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/msg/__init__.py\n'}
+[0.427619] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/grasp_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.427661] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/grasp_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.427700] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/_grasp_msg_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.427737] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/_grasp_msg_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.427785] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/_grasp_msg_s.ep.rosidl_typesupport_c.c\n'}
+[0.427846] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/__init__.py\n'}
+[0.427902] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/grasp_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.427943] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/libgrasp_msg__rosidl_generator_py.so\n'}
+[0.450522] (grasp_msg) StdoutLine: {'line': b"Listing '/home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg'...\n"}
+[0.450673] (grasp_msg) StdoutLine: {'line': b"Listing '/home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/msg'...\n"}
+[0.454505] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/grasp_msg_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.454660] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/grasp_msg_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.454886] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages/grasp_msg/grasp_msg_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.455084] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/lib/libgrasp_msg__rosidl_generator_py.so\n'}
+[0.455203] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/msg/GraspMessage.idl\n'}
+[0.455272] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/msg/GraspMessage.msg\n'}
+[0.455346] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/ament_index/resource_index/package_run_dependencies/grasp_msg\n'}
+[0.455434] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/ament_index/resource_index/parent_prefix_path/grasp_msg\n'}
+[0.455505] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/environment/ament_prefix_path.sh\n'}
+[0.455577] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/environment/ament_prefix_path.dsv\n'}
+[0.455650] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/environment/path.sh\n'}
+[0.455690] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/environment/path.dsv\n'}
+[0.455729] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/local_setup.bash\n'}
+[0.455765] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/local_setup.sh\n'}
+[0.455810] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/local_setup.zsh\n'}
+[0.455894] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/local_setup.dsv\n'}
+[0.455955] (grasp_msg) StdoutLine: {'line': b'-- Installing: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/package.dsv\n'}
+[0.456008] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/ament_index/resource_index/packages/grasp_msg\n'}
+[0.456067] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/export_grasp_msg__rosidl_generator_cExport.cmake\n'}
+[0.456121] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/export_grasp_msg__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.456191] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/export_grasp_msg__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.456232] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/export_grasp_msg__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.456302] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msg__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.456357] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msg__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.456398] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msg__rosidl_typesupport_cExport.cmake\n'}
+[0.456479] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msg__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.456520] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/export_grasp_msg__rosidl_generator_cppExport.cmake\n'}
+[0.456590] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/export_grasp_msg__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.456650] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/export_grasp_msg__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.456711] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msg__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.456785] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msg__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.456850] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msg__rosidl_typesupport_cppExport.cmake\n'}
+[0.456919] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msg__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.456990] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/export_grasp_msg__rosidl_generator_pyExport.cmake\n'}
+[0.457061] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/export_grasp_msg__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.457128] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/rosidl_cmake-extras.cmake\n'}
+[0.457182] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.457223] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.457261] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.457303] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.457345] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.457386] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.457425] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msgConfig.cmake\n'}
+[0.457466] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/cmake/grasp_msgConfig-version.cmake\n'}
+[0.457507] (grasp_msg) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/grasp_msg/share/grasp_msg/package.xml\n'}
+[0.458690] (grasp_msg) CommandEnded: {'returncode': 0}
+[0.500276] (-) TimerEvent: {}
+[0.523289] (grasp_msg) JobEnded: {'identifier': 'grasp_msg', 'rc': 0}
+[0.524033] (franka_grasp) JobStarted: {'identifier': 'franka_grasp'}
+[0.526505] (grasp_publisher) JobStarted: {'identifier': 'grasp_publisher'}
+[0.531107] (franka_grasp) JobProgress: {'identifier': 'franka_grasp', 'progress': 'cmake'}
+[0.531608] (franka_grasp) JobProgress: {'identifier': 'franka_grasp', 'progress': 'build'}
+[0.531922] (franka_grasp) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/yuan/mani_gpt/build/franka_grasp', '--', '-j16', '-l16'], 'cwd': '/home/yuan/mani_gpt/build/franka_grasp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'yuan'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/yuan/mani_gpt/install/grasp_msg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/yuan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('SYSTEMD_EXEC_PID', '1386500'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1011/bus'), ('IGNORE_PREEMPT_RT_PRESENCE', '1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/yuan/mani_gpt/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'yuan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'yuan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '4'), ('PATH', '/opt/ros/humble/bin:/home/yuan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aegina:@/tmp/.ICE-unix/1380215,unix/aegina:/tmp/.ICE-unix/1380215'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b3d64fcb_11eb_4744_bb76_b949c2de00ce'), ('XDG_RUNTIME_DIR', '/run/user/1011'), ('DISPLAY', ':3'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1011/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.124'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1011/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/yuan/mani_gpt/install/grasp_publisher:/home/yuan/mani_gpt/install/franka_grasp:/home/yuan/mani_gpt/install/grasp_msg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1011/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/yuan/mani_gpt/build/franka_grasp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages:/home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/yuan/mani_gpt/install/grasp_msg:/home/yuan/mani_gpt/install/franka_grasp:/home/yuan/mani_gpt/install/grasp_publisher:/opt/ros/humble')]), 'shell': False}
+[0.571934] (franka_grasp) StdoutLine: {'line': b'[ 50%] Built target examples_common\n'}
+[0.594756] (franka_grasp) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/grasp.dir/src/grasp.cpp.o\x1b[0m\n'}
+[0.600389] (-) TimerEvent: {}
+[0.700733] (-) TimerEvent: {}
+[0.801009] (-) TimerEvent: {}
+[0.901314] (-) TimerEvent: {}
+[1.001686] (-) TimerEvent: {}
+[1.101998] (-) TimerEvent: {}
+[1.202259] (-) TimerEvent: {}
+[1.302615] (-) TimerEvent: {}
+[1.402924] (-) TimerEvent: {}
+[1.423647] (grasp_publisher) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/grasp_publisher', 'build', '--build-base', '/home/yuan/mani_gpt/build/grasp_publisher/build', 'install', '--record', '/home/yuan/mani_gpt/build/grasp_publisher/install.log', '--install-scripts', '$base/lib/grasp_publisher', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/yuan/mani_gpt/src/grasp_publisher', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'yuan', 'LC_TIME': 'de_DE.UTF-8', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/yuan/mani_gpt/install/grasp_msg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/yuan', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'SYSTEMD_EXEC_PID': '1386500', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1011/bus', 'IGNORE_PREEMPT_RT_PRESENCE': '1', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'COLCON_PREFIX_PATH': '/home/yuan/mani_gpt/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'yuan', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'yuan', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '4', 'PATH': '/opt/ros/humble/bin:/home/yuan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/aegina:@/tmp/.ICE-unix/1380215,unix/aegina:/tmp/.ICE-unix/1380215', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b3d64fcb_11eb_4744_bb76_b949c2de00ce', 'XDG_RUNTIME_DIR': '/run/user/1011', 'DISPLAY': ':3', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1011/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.124', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1011/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/yuan/mani_gpt/install/grasp_publisher:/home/yuan/mani_gpt/install/franka_grasp:/home/yuan/mani_gpt/install/grasp_msg:/opt/ros/humble', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1011/gnupg/S.gpg-agent:0:1', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/yuan/mani_gpt/build/grasp_publisher', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/yuan/mani_gpt/build/grasp_publisher/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages:/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages:/home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'LC_NUMERIC': 'de_DE.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/yuan/mani_gpt/install/grasp_msg:/home/yuan/mani_gpt/install/franka_grasp'}, 'shell': False}
+[1.503009] (-) TimerEvent: {}
+[1.603321] (-) TimerEvent: {}
+[1.703674] (-) TimerEvent: {}
+[1.723096] (grasp_publisher) StderrLine: {'line': b"/usr/lib/python3/dist-packages/setuptools/dist.py:723: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[1.723289] (grasp_publisher) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.733232] (grasp_publisher) StdoutLine: {'line': b'running egg_info\n'}
+[1.733978] (grasp_publisher) StdoutLine: {'line': b'writing ../../build/grasp_publisher/grasp_publisher.egg-info/PKG-INFO\n'}
+[1.734223] (grasp_publisher) StdoutLine: {'line': b'writing dependency_links to ../../build/grasp_publisher/grasp_publisher.egg-info/dependency_links.txt\n'}
+[1.734357] (grasp_publisher) StdoutLine: {'line': b'writing entry points to ../../build/grasp_publisher/grasp_publisher.egg-info/entry_points.txt\n'}
+[1.734458] (grasp_publisher) StdoutLine: {'line': b'writing requirements to ../../build/grasp_publisher/grasp_publisher.egg-info/requires.txt\n'}
+[1.734659] (grasp_publisher) StdoutLine: {'line': b'writing top-level names to ../../build/grasp_publisher/grasp_publisher.egg-info/top_level.txt\n'}
+[1.736077] (grasp_publisher) StderrLine: {'line': b"package init file './resource/__init__.py' not found (or not a regular file)\n"}
+[1.736298] (grasp_publisher) StderrLine: {'line': b"package init file './test/__init__.py' not found (or not a regular file)\n"}
+[1.736445] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/camera_capture/__init__.py' not found (or not a regular file)\n"}
+[1.736546] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/__init__.py' not found (or not a regular file)\n"}
+[1.736648] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/__init__.py' not found (or not a regular file)\n"}
+[1.736734] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/__init__.py' not found (or not a regular file)\n"}
+[1.736811] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/__init__.py' not found (or not a regular file)\n"}
+[1.737053] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/models/__init__.py' not found (or not a regular file)\n"}
+[1.737173] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/camera_capture/lab/__init__.py' not found (or not a regular file)\n"}
+[1.737552] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.737671] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/tools/__init__.py' not found (or not a regular file)\n"}
+[1.737902] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/__init__.py' not found (or not a regular file)\n"}
+[1.738071] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/evaluators/proj/__init__.py' not found (or not a regular file)\n"}
+[1.738165] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/evaluators/proj/distill/__init__.py' not found (or not a regular file)\n"}
+[1.738272] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/evaluators/proj/image_text/__init__.py' not found (or not a regular file)\n"}
+[1.738409] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/evaluators/proj/paligemma/__init__.py' not found (or not a regular file)\n"}
+[1.738541] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/evaluators/proj/givt/__init__.py' not found (or not a regular file)\n"}
+[1.738628] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/evaluators/proj/cappa/__init__.py' not found (or not a regular file)\n"}
+[1.738715] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/evaluators/proj/uvim/__init__.py' not found (or not a regular file)\n"}
+[1.738856] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/evaluators/proj/paligemma/transfers/__init__.py' not found (or not a regular file)\n"}
+[1.738986] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/evaluators/proj/uvim/coltran_fid_data/__init__.py' not found (or not a regular file)\n"}
+[1.739083] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/__init__.py' not found (or not a regular file)\n"}
+[1.739165] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/distill/__init__.py' not found (or not a regular file)\n"}
+[1.739322] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/scaling_laws/__init__.py' not found (or not a regular file)\n"}
+[1.739391] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/reward_tune/__init__.py' not found (or not a regular file)\n"}
+[1.739468] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/image_text/__init__.py' not found (or not a regular file)\n"}
+[1.739563] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/clippo/__init__.py' not found (or not a regular file)\n"}
+[1.739655] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/flexivit/__init__.py' not found (or not a regular file)\n"}
+[1.739744] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/paligemma/__init__.py' not found (or not a regular file)\n"}
+[1.739839] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/givt/__init__.py' not found (or not a regular file)\n"}
+[1.739923] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/cappa/__init__.py' not found (or not a regular file)\n"}
+[1.739999] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/uvim/__init__.py' not found (or not a regular file)\n"}
+[1.740088] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/gsam/__init__.py' not found (or not a regular file)\n"}
+[1.740156] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/configs/proj/paligemma/transfers/__init__.py' not found (or not a regular file)\n"}
+[1.740414] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/chartqa/__init__.py' not found (or not a regular file)\n"}
+[1.740493] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/textcaps/__init__.py' not found (or not a regular file)\n"}
+[1.740559] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/nocaps/__init__.py' not found (or not a regular file)\n"}
+[1.740630] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/scicap/__init__.py' not found (or not a regular file)\n"}
+[1.740688] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/gqa/__init__.py' not found (or not a regular file)\n"}
+[1.740801] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/aokvqa/__init__.py' not found (or not a regular file)\n"}
+[1.740910] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/pope/__init__.py' not found (or not a regular file)\n"}
+[1.740991] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/widgetcap/__init__.py' not found (or not a regular file)\n"}
+[1.741054] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/rsvqa_lr/__init__.py' not found (or not a regular file)\n"}
+[1.741097] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/tallyqa/__init__.py' not found (or not a regular file)\n"}
+[1.741167] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/rsvqa_hr/__init__.py' not found (or not a regular file)\n"}
+[1.741222] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/textvqa/__init__.py' not found (or not a regular file)\n"}
+[1.741260] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/science_qa/__init__.py' not found (or not a regular file)\n"}
+[1.741330] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/vqa/__init__.py' not found (or not a regular file)\n"}
+[1.741379] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/screen2words/__init__.py' not found (or not a regular file)\n"}
+[1.741431] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/ai2d/__init__.py' not found (or not a regular file)\n"}
+[1.741483] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/xgqa/__init__.py' not found (or not a regular file)\n"}
+[1.741550] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/stvqa/__init__.py' not found (or not a regular file)\n"}
+[1.741607] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/coco35l/__init__.py' not found (or not a regular file)\n"}
+[1.741674] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/refcoco/__init__.py' not found (or not a regular file)\n"}
+[1.741732] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/okvqa/__init__.py' not found (or not a regular file)\n"}
+[1.741791] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/imagenet/__init__.py' not found (or not a regular file)\n"}
+[1.741846] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/xm3600/__init__.py' not found (or not a regular file)\n"}
+[1.741899] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/vizwizvqa/__init__.py' not found (or not a regular file)\n"}
+[1.741952] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/docvqa/__init__.py' not found (or not a regular file)\n"}
+[1.742004] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/datasets/infovqa/__init__.py' not found (or not a regular file)\n"}
+[1.742063] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/tools/lit_demo/__init__.py' not found (or not a regular file)\n"}
+[1.742118] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/tools/lit_demo/src/__init__.py' not found (or not a regular file)\n"}
+[1.742171] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/tools/lit_demo/src/tokenizers/__init__.py' not found (or not a regular file)\n"}
+[1.742234] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/tools/lit_demo/src/style/__init__.py' not found (or not a regular file)\n"}
+[1.742284] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/tools/lit_demo/src/components/__init__.py' not found (or not a regular file)\n"}
+[1.742325] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/tools/lit_demo/src/lit_demo/__init__.py' not found (or not a regular file)\n"}
+[1.742381] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/pp/proj/__init__.py' not found (or not a regular file)\n"}
+[1.742439] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/pp/proj/flaxformer/__init__.py' not found (or not a regular file)\n"}
+[1.742492] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/pp/proj/clippo/__init__.py' not found (or not a regular file)\n"}
+[1.742536] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/pp/proj/paligemma/__init__.py' not found (or not a regular file)\n"}
+[1.742626] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/pp/proj/givt/__init__.py' not found (or not a regular file)\n"}
+[1.742714] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/pp/proj/uvim/__init__.py' not found (or not a regular file)\n"}
+[1.742810] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/proj/__init__.py' not found (or not a regular file)\n"}
+[1.742894] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/proj/distill/__init__.py' not found (or not a regular file)\n"}
+[1.742971] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/proj/flexi/__init__.py' not found (or not a regular file)\n"}
+[1.743062] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/proj/image_text/__init__.py' not found (or not a regular file)\n"}
+[1.743151] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/proj/paligemma/__init__.py' not found (or not a regular file)\n"}
+[1.743233] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/proj/givt/__init__.py' not found (or not a regular file)\n"}
+[1.743318] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/proj/cappa/__init__.py' not found (or not a regular file)\n"}
+[1.743393] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/proj/uvim/__init__.py' not found (or not a regular file)\n"}
+[1.743475] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/trainers/proj/gsam/__init__.py' not found (or not a regular file)\n"}
+[1.743551] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/models/proj/__init__.py' not found (or not a regular file)\n"}
+[1.743614] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/models/proj/flaxformer/__init__.py' not found (or not a regular file)\n"}
+[1.743692] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/models/proj/flexi/__init__.py' not found (or not a regular file)\n"}
+[1.743753] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/models/proj/image_text/__init__.py' not found (or not a regular file)\n"}
+[1.743791] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/models/proj/clippo/__init__.py' not found (or not a regular file)\n"}
+[1.743947] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/models/proj/paligemma/__init__.py' not found (or not a regular file)\n"}
+[1.744041] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/models/proj/givt/__init__.py' not found (or not a regular file)\n"}
+[1.744137] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/models/proj/cappa/__init__.py' not found (or not a regular file)\n"}
+[1.744242] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/big_vision/big_vision/models/proj/uvim/__init__.py' not found (or not a regular file)\n"}
+[1.744327] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/__init__.py' not found (or not a regular file)\n"}
+[1.744426] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 1 - hello ZED/__init__.py' not found (or not a regular file)\n"}
+[1.744526] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 5 - spatial mapping/__init__.py' not found (or not a regular file)\n"}
+[1.744610] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 4 - positional tracking/__init__.py' not found (or not a regular file)\n"}
+[1.744693] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 9 - global localization/__init__.py' not found (or not a regular file)\n"}
+[1.744784] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 8 - body tracking/__init__.py' not found (or not a regular file)\n"}
+[1.744881] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 3 - depth sensing/__init__.py' not found (or not a regular file)\n"}
+[1.744982] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 2 - image capture/__init__.py' not found (or not a regular file)\n"}
+[1.745079] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 6 - object detection/__init__.py' not found (or not a regular file)\n"}
+[1.745187] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 7 - sensor data/__init__.py' not found (or not a regular file)\n"}
+[1.745312] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 1 - hello ZED/python/__init__.py' not found (or not a regular file)\n"}
+[1.745408] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 1 - hello ZED/csharp/__init__.py' not found (or not a regular file)\n"}
+[1.745528] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 1 - hello ZED/cpp/__init__.py' not found (or not a regular file)\n"}
+[1.745640] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 1 - hello ZED/c/__init__.py' not found (or not a regular file)\n"}
+[1.745753] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 1 - hello ZED/csharp/Properties/__init__.py' not found (or not a regular file)\n"}
+[1.745870] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 5 - spatial mapping/python/__init__.py' not found (or not a regular file)\n"}
+[1.745987] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 5 - spatial mapping/csharp/__init__.py' not found (or not a regular file)\n"}
+[1.746103] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 5 - spatial mapping/cpp/__init__.py' not found (or not a regular file)\n"}
+[1.746215] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 5 - spatial mapping/c/__init__.py' not found (or not a regular file)\n"}
+[1.746313] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 5 - spatial mapping/csharp/Properties/__init__.py' not found (or not a regular file)\n"}
+[1.746452] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 4 - positional tracking/python/__init__.py' not found (or not a regular file)\n"}
+[1.746553] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 4 - positional tracking/csharp/__init__.py' not found (or not a regular file)\n"}
+[1.746693] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 4 - positional tracking/cpp/__init__.py' not found (or not a regular file)\n"}
+[1.746807] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 4 - positional tracking/c/__init__.py' not found (or not a regular file)\n"}
+[1.746897] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 4 - positional tracking/csharp/Properties/__init__.py' not found (or not a regular file)\n"}
+[1.747010] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 9 - global localization/python/__init__.py' not found (or not a regular file)\n"}
+[1.747123] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 9 - global localization/cpp/__init__.py' not found (or not a regular file)\n"}
+[1.747227] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 8 - body tracking/python/__init__.py' not found (or not a regular file)\n"}
+[1.747338] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 8 - body tracking/csharp/__init__.py' not found (or not a regular file)\n"}
+[1.747431] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 8 - body tracking/cpp/__init__.py' not found (or not a regular file)\n"}
+[1.747521] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 8 - body tracking/c/__init__.py' not found (or not a regular file)\n"}
+[1.747599] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 8 - body tracking/csharp/Properties/__init__.py' not found (or not a regular file)\n"}
+[1.747675] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 3 - depth sensing/python/__init__.py' not found (or not a regular file)\n"}
+[1.747749] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 3 - depth sensing/csharp/__init__.py' not found (or not a regular file)\n"}
+[1.747847] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 3 - depth sensing/cpp/__init__.py' not found (or not a regular file)\n"}
+[1.747931] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 3 - depth sensing/c/__init__.py' not found (or not a regular file)\n"}
+[1.748021] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 3 - depth sensing/csharp/Properties/__init__.py' not found (or not a regular file)\n"}
+[1.748098] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 2 - image capture/python/__init__.py' not found (or not a regular file)\n"}
+[1.748176] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 2 - image capture/csharp/__init__.py' not found (or not a regular file)\n"}
+[1.748263] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 2 - image capture/cpp/__init__.py' not found (or not a regular file)\n"}
+[1.748339] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 2 - image capture/c/__init__.py' not found (or not a regular file)\n"}
+[1.748407] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 2 - image capture/csharp/Properties/__init__.py' not found (or not a regular file)\n"}
+[1.748478] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 6 - object detection/python/__init__.py' not found (or not a regular file)\n"}
+[1.748550] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 6 - object detection/csharp/__init__.py' not found (or not a regular file)\n"}
+[1.748621] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 6 - object detection/cpp/__init__.py' not found (or not a regular file)\n"}
+[1.748695] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 6 - object detection/c/__init__.py' not found (or not a regular file)\n"}
+[1.748768] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 6 - object detection/csharp/Properties/__init__.py' not found (or not a regular file)\n"}
+[1.748843] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 7 - sensor data/python/__init__.py' not found (or not a regular file)\n"}
+[1.748918] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 7 - sensor data/csharp/__init__.py' not found (or not a regular file)\n"}
+[1.748995] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 7 - sensor data/cpp/__init__.py' not found (or not a regular file)\n"}
+[1.749093] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 7 - sensor data/c/__init__.py' not found (or not a regular file)\n"}
+[1.749172] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/zed-sdk-/tutorials/tutorial 7 - sensor data/csharp/Properties/__init__.py' not found (or not a regular file)\n"}
+[1.749248] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/images/__init__.py' not found (or not a regular file)\n"}
+[1.749324] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/build/__init__.py' not found (or not a regular file)\n"}
+[1.749400] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/build/lib/__init__.py' not found (or not a regular file)\n"}
+[1.749477] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/build/lib/simclr/__init__.py' not found (or not a regular file)\n"}
+[1.749553] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/build/lib/simclr/tf2/__init__.py' not found (or not a regular file)\n"}
+[1.760755] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/dataset_lib/flexio/__init__.py' not found (or not a regular file)\n"}
+[1.761050] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/dataset_lib/flexio/tests/__init__.py' not found (or not a regular file)\n"}
+[1.761373] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/tasseo/__init__.py' not found (or not a regular file)\n"}
+[1.762165] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/performer/__init__.py' not found (or not a regular file)\n"}
+[1.762683] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/token_turing/__init__.py' not found (or not a regular file)\n"}
+[1.762871] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/univrd/__init__.py' not found (or not a regular file)\n"}
+[1.762954] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/av_mae/__init__.py' not found (or not a regular file)\n"}
+[1.763931] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/adversarialtraining/__init__.py' not found (or not a regular file)\n"}
+[1.764115] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/avatar/__init__.py' not found (or not a regular file)\n"}
+[1.764207] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/unloc/__init__.py' not found (or not a regular file)\n"}
+[1.765074] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/pixel_llm/io/__init__.py' not found (or not a regular file)\n"}
+[1.765240] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/pixel_llm/tools/__init__.py' not found (or not a regular file)\n"}
+[1.765346] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/pixel_llm/modeling/__init__.py' not found (or not a regular file)\n"}
+[1.765439] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/pixel_llm/configs/t5/__init__.py' not found (or not a regular file)\n"}
+[1.765513] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/pixel_llm/configs/bert/__init__.py' not found (or not a regular file)\n"}
+[1.765727] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/matvit/configs/__init__.py' not found (or not a regular file)\n"}
+[1.765840] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/tasseo/configs/__init__.py' not found (or not a regular file)\n"}
+[1.765958] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/tasseo/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.766095] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/tasseo/configs/chrmID/__init__.py' not found (or not a regular file)\n"}
+[1.767605] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/pondernet/__init__.py' not found (or not a regular file)\n"}
+[1.767765] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/plainvit/__init__.py' not found (or not a regular file)\n"}
+[1.768080] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/universal_transformer/__init__.py' not found (or not a regular file)\n"}
+[1.768193] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/deformable_detr/__init__.py' not found (or not a regular file)\n"}
+[1.768432] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/pondernet/pondervit/__init__.py' not found (or not a regular file)\n"}
+[1.768684] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/plainvit/configs/__init__.py' not found (or not a regular file)\n"}
+[1.769030] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/centernet/notebooks/__init__.py' not found (or not a regular file)\n"}
+[1.769179] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/centernet/tools/__init__.py' not found (or not a regular file)\n"}
+[1.769371] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/universal_transformer/fig/__init__.py' not found (or not a regular file)\n"}
+[1.769488] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/universal_transformer/uvit/__init__.py' not found (or not a regular file)\n"}
+[1.769583] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/universal_transformer/uvit/configs/__init__.py' not found (or not a regular file)\n"}
+[1.769671] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/deformable_detr/configs/__init__.py' not found (or not a regular file)\n"}
+[1.769760] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/deformable_detr/tests/__init__.py' not found (or not a regular file)\n"}
+[1.769825] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/baselines/segment_anything/notebooks/__init__.py' not found (or not a regular file)\n"}
+[1.770048] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/knowledge_visual_language/models/__init__.py' not found (or not a regular file)\n"}
+[1.770149] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/knowledge_visual_language/data/wikidata/__init__.py' not found (or not a regular file)\n"}
+[1.770494] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/streaming_dvc/tools/__init__.py' not found (or not a regular file)\n"}
+[1.770766] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/token_turing/data/__init__.py' not found (or not a regular file)\n"}
+[1.770876] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/av_mae/configs/__init__.py' not found (or not a regular file)\n"}
+[1.770978] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/av_mae/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.771082] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/av_mae/tests/__init__.py' not found (or not a regular file)\n"}
+[1.771170] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/av_mae/configs/vggsound/__init__.py' not found (or not a regular file)\n"}
+[1.771235] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/av_mae/configs/imagenet/__init__.py' not found (or not a regular file)\n"}
+[1.771309] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/av_mae/configs/audioset/__init__.py' not found (or not a regular file)\n"}
+[1.771897] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/adversarialtraining/images/__init__.py' not found (or not a regular file)\n"}
+[1.771999] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/adversarialtraining/configs/__init__.py' not found (or not a regular file)\n"}
+[1.772123] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/adversarialtraining/configs/imagenet_train/__init__.py' not found (or not a regular file)\n"}
+[1.772235] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/polyvit/data/__init__.py' not found (or not a regular file)\n"}
+[1.772439] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/avatar/configs/__init__.py' not found (or not a regular file)\n"}
+[1.772538] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/avatar/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.772627] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/avatar/configs/how2/__init__.py' not found (or not a regular file)\n"}
+[1.772717] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/objectvivit/tools/__init__.py' not found (or not a regular file)\n"}
+[1.772824] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/adatape/fig/__init__.py' not found (or not a regular file)\n"}
+[1.772934] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/adatape/adatape_vit/configs/__init__.py' not found (or not a regular file)\n"}
+[1.773071] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/unloc/configs/__init__.py' not found (or not a regular file)\n"}
+[1.773140] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/unloc/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.773239] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/unloc/configs/qvhighlights/__init__.py' not found (or not a regular file)\n"}
+[1.773337] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/unloc/configs/coin/__init__.py' not found (or not a regular file)\n"}
+[1.773432] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/unloc/configs/activitynet_captions/__init__.py' not found (or not a regular file)\n"}
+[1.773544] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/unloc/configs/activitynet/__init__.py' not found (or not a regular file)\n"}
+[1.773619] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/unloc/configs/charades_sta/__init__.py' not found (or not a regular file)\n"}
+[1.774860] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/scenic/scenic/projects/densevoc/tools/__init__.py' not found (or not a regular file)\n"}
+[1.775960] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/scripts/__init__.py' not found (or not a regular file)\n"}
+[1.776122] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/build/__init__.py' not found (or not a regular file)\n"}
+[1.776191] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/src/__init__.py' not found (or not a regular file)\n"}
+[1.776237] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/__init__.py' not found (or not a regular file)\n"}
+[1.778616] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/__init__.py' not found (or not a regular file)\n"}
+[1.778762] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/models/__init__.py' not found (or not a regular file)\n"}
+[1.778877] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/setup/__init__.py' not found (or not a regular file)\n"}
+[1.778944] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/blocks/__init__.py' not found (or not a regular file)\n"}
+[1.779020] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/panda/__init__.py' not found (or not a regular file)\n"}
+[1.779080] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/packed/__init__.py' not found (or not a regular file)\n"}
+[1.779121] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/pile/__init__.py' not found (or not a regular file)\n"}
+[1.779180] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/panda/meshes/__init__.py' not found (or not a regular file)\n"}
+[1.779224] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/panda/meshes/visual/__init__.py' not found (or not a regular file)\n"}
+[1.779281] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/panda/meshes/collision/__init__.py' not found (or not a regular file)\n"}
+[1.779325] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/packed/test/__init__.py' not found (or not a regular file)\n"}
+[1.779363] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/packed/train/__init__.py' not found (or not a regular file)\n"}
+[1.779490] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/pile/test/__init__.py' not found (or not a regular file)\n"}
+[1.779635] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/GIGA/data/urdfs/pile/train/__init__.py' not found (or not a regular file)\n"}
+[1.780465] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/configs/__init__.py' not found (or not a regular file)\n"}
+[1.780584] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.780648] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/tools/__init__.py' not found (or not a regular file)\n"}
+[1.780805] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/__init__.py' not found (or not a regular file)\n"}
+[1.780893] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/docs/__init__.py' not found (or not a regular file)\n"}
+[1.781001] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/datasets/metadata/__init__.py' not found (or not a regular file)\n"}
+[1.781084] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/Deformable-DETR/__init__.py' not found (or not a regular file)\n"}
+[1.781154] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/__init__.py' not found (or not a regular file)\n"}
+[1.781214] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/Deformable-DETR/configs/__init__.py' not found (or not a regular file)\n"}
+[1.781327] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/Deformable-DETR/tools/__init__.py' not found (or not a regular file)\n"}
+[1.781390] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/Deformable-DETR/docs/__init__.py' not found (or not a regular file)\n"}
+[1.781493] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/Deformable-DETR/figs/__init__.py' not found (or not a regular file)\n"}
+[1.781678] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/Deformable-DETR/models/ops/__init__.py' not found (or not a regular file)\n"}
+[1.781846] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/Deformable-DETR/models/ops/src/__init__.py' not found (or not a regular file)\n"}
+[1.781908] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/Deformable-DETR/models/ops/src/cpu/__init__.py' not found (or not a regular file)\n"}
+[1.781973] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/Deformable-DETR/models/ops/src/cuda/__init__.py' not found (or not a regular file)\n"}
+[1.782034] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/configs/__init__.py' not found (or not a regular file)\n"}
+[1.782092] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.782234] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/docs/__init__.py' not found (or not a regular file)\n"}
+[1.782298] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/tools/deploy/__init__.py' not found (or not a regular file)\n"}
+[1.782366] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/centernet/data/__init__.py' not found (or not a regular file)\n"}
+[1.782423] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/centernet/modeling/__init__.py' not found (or not a regular file)\n"}
+[1.782488] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/centernet/data/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.782541] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/centernet/data/transforms/__init__.py' not found (or not a regular file)\n"}
+[1.782606] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/centernet/modeling/meta_arch/__init__.py' not found (or not a regular file)\n"}
+[1.782670] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/centernet/modeling/dense_heads/__init__.py' not found (or not a regular file)\n"}
+[1.782726] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/centernet/modeling/backbone/__init__.py' not found (or not a regular file)\n"}
+[1.782781] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/centernet/modeling/layers/__init__.py' not found (or not a regular file)\n"}
+[1.782844] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/third_party/CenterNet2/centernet/modeling/roi_heads/__init__.py' not found (or not a regular file)\n"}
+[1.782917] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/detic/evaluation/__init__.py' not found (or not a regular file)\n"}
+[1.782988] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/detic/data/__init__.py' not found (or not a regular file)\n"}
+[1.783083] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/detic/modeling/__init__.py' not found (or not a regular file)\n"}
+[1.783146] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/detic/data/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.783278] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/detic/data/transforms/__init__.py' not found (or not a regular file)\n"}
+[1.783331] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/detic/modeling/meta_arch/__init__.py' not found (or not a regular file)\n"}
+[1.783404] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/detic/modeling/text/__init__.py' not found (or not a regular file)\n"}
+[1.783477] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/detic/modeling/backbone/__init__.py' not found (or not a regular file)\n"}
+[1.783550] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/Detic/detic/modeling/roi_heads/__init__.py' not found (or not a regular file)\n"}
+[1.783623] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/dev/__init__.py' not found (or not a regular file)\n"}
+[1.783706] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/__init__.py' not found (or not a regular file)\n"}
+[1.783915] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/build/__init__.py' not found (or not a regular file)\n"}
+[1.783978] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/datasets/__init__.py' not found (or not a regular file)\n"}
+[1.784036] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/docker/__init__.py' not found (or not a regular file)\n"}
+[1.784262] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/__init__.py' not found (or not a regular file)\n"}
+[1.784369] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/demo/__init__.py' not found (or not a regular file)\n"}
+[1.784438] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/docs/__init__.py' not found (or not a regular file)\n"}
+[1.784555] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/dev/packaging/__init__.py' not found (or not a regular file)\n"}
+[1.784654] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/COCO-Detection/__init__.py' not found (or not a regular file)\n"}
+[1.784732] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/LVISv1-InstanceSegmentation/__init__.py' not found (or not a regular file)\n"}
+[1.784829] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/quick_schedules/__init__.py' not found (or not a regular file)\n"}
+[1.784919] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/new_baselines/__init__.py' not found (or not a regular file)\n"}
+[1.785011] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/common/__init__.py' not found (or not a regular file)\n"}
+[1.785100] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/COCO-InstanceSegmentation/__init__.py' not found (or not a regular file)\n"}
+[1.785188] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/Detectron1-Comparisons/__init__.py' not found (or not a regular file)\n"}
+[1.785289] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/Misc/__init__.py' not found (or not a regular file)\n"}
+[1.785393] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/Cityscapes/__init__.py' not found (or not a regular file)\n"}
+[1.785497] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/COCO-Keypoints/__init__.py' not found (or not a regular file)\n"}
+[1.785586] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/PascalVOC-Detection/__init__.py' not found (or not a regular file)\n"}
+[1.785674] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/COCO-PanopticSegmentation/__init__.py' not found (or not a regular file)\n"}
+[1.785763] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/common/data/__init__.py' not found (or not a regular file)\n"}
+[1.785832] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/configs/common/models/__init__.py' not found (or not a regular file)\n"}
+[1.785919] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/tools/deploy/__init__.py' not found (or not a regular file)\n"}
+[1.786002] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/tests/export/__init__.py' not found (or not a regular file)\n"}
+[1.786082] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/tests/utils/__init__.py' not found (or not a regular file)\n"}
+[1.786149] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/tests/config/__init__.py' not found (or not a regular file)\n"}
+[1.786403] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/tests/config/dir1/__init__.py' not found (or not a regular file)\n"}
+[1.786532] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/PointRend/__init__.py' not found (or not a regular file)\n"}
+[1.786639] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/MViTv2/__init__.py' not found (or not a regular file)\n"}
+[1.786744] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/PointSup/__init__.py' not found (or not a regular file)\n"}
+[1.786844] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DeepLab/__init__.py' not found (or not a regular file)\n"}
+[1.786942] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/Rethinking-BatchNorm/__init__.py' not found (or not a regular file)\n"}
+[1.787007] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/TridentNet/__init__.py' not found (or not a regular file)\n"}
+[1.787105] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/ViTDet/__init__.py' not found (or not a regular file)\n"}
+[1.787190] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/TensorMask/__init__.py' not found (or not a regular file)\n"}
+[1.787281] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/__init__.py' not found (or not a regular file)\n"}
+[1.787359] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/Panoptic-DeepLab/__init__.py' not found (or not a regular file)\n"}
+[1.787432] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/PointRend/configs/__init__.py' not found (or not a regular file)\n"}
+[1.787538] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/PointRend/configs/InstanceSegmentation/__init__.py' not found (or not a regular file)\n"}
+[1.787609] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/PointRend/configs/SemanticSegmentation/__init__.py' not found (or not a regular file)\n"}
+[1.787690] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/MViTv2/configs/__init__.py' not found (or not a regular file)\n"}
+[1.787757] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/MViTv2/configs/common/__init__.py' not found (or not a regular file)\n"}
+[1.787884] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/PointSup/configs/__init__.py' not found (or not a regular file)\n"}
+[1.787973] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/PointSup/tools/__init__.py' not found (or not a regular file)\n"}
+[1.788057] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DeepLab/configs/__init__.py' not found (or not a regular file)\n"}
+[1.788138] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DeepLab/configs/Cityscapes-SemanticSegmentation/__init__.py' not found (or not a regular file)\n"}
+[1.788221] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/Rethinking-BatchNorm/configs/__init__.py' not found (or not a regular file)\n"}
+[1.788283] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/TridentNet/configs/__init__.py' not found (or not a regular file)\n"}
+[1.788369] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/ViTDet/configs/__init__.py' not found (or not a regular file)\n"}
+[1.788429] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/ViTDet/configs/LVIS/__init__.py' not found (or not a regular file)\n"}
+[1.788487] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/ViTDet/configs/COCO/__init__.py' not found (or not a regular file)\n"}
+[1.788546] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/ViTDet/configs/common/__init__.py' not found (or not a regular file)\n"}
+[1.788627] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/TensorMask/configs/__init__.py' not found (or not a regular file)\n"}
+[1.788700] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/TensorMask/tensormask/layers/csrc/__init__.py' not found (or not a regular file)\n"}
+[1.788774] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/TensorMask/tensormask/layers/csrc/SwapAlign2Nat/__init__.py' not found (or not a regular file)\n"}
+[1.788845] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/dev/__init__.py' not found (or not a regular file)\n"}
+[1.788915] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/configs/__init__.py' not found (or not a regular file)\n"}
+[1.788975] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/doc/__init__.py' not found (or not a regular file)\n"}
+[1.789054] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/tests/__init__.py' not found (or not a regular file)\n"}
+[1.789117] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/configs/quick_schedules/__init__.py' not found (or not a regular file)\n"}
+[1.789174] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/configs/evolution/__init__.py' not found (or not a regular file)\n"}
+[1.789229] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/configs/HRNet/__init__.py' not found (or not a regular file)\n"}
+[1.789293] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/configs/cse/__init__.py' not found (or not a regular file)\n"}
+[1.789333] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/DensePose/configs/quick_schedules/cse/__init__.py' not found (or not a regular file)\n"}
+[1.791091] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/Panoptic-DeepLab/configs/__init__.py' not found (or not a regular file)\n"}
+[1.791365] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/Panoptic-DeepLab/configs/Cityscapes-PanopticSegmentation/__init__.py' not found (or not a regular file)\n"}
+[1.791473] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/projects/Panoptic-DeepLab/configs/COCO-PanopticSegmentation/__init__.py' not found (or not a regular file)\n"}
+[1.791543] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/docs/modules/__init__.py' not found (or not a regular file)\n"}
+[1.791610] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/docs/tutorials/__init__.py' not found (or not a regular file)\n"}
+[1.791677] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/docs/notes/__init__.py' not found (or not a regular file)\n"}
+[1.791742] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/docs/_static/__init__.py' not found (or not a regular file)\n"}
+[1.791807] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/docs/_static/css/__init__.py' not found (or not a regular file)\n"}
+[1.793277] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/detectron2/layers/csrc/__init__.py' not found (or not a regular file)\n"}
+[1.793438] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/detectron2/layers/csrc/deformable/__init__.py' not found (or not a regular file)\n"}
+[1.793543] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/detectron2/layers/csrc/cocoeval/__init__.py' not found (or not a regular file)\n"}
+[1.793629] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/detectron2/layers/csrc/box_iou_rotated/__init__.py' not found (or not a regular file)\n"}
+[1.793709] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/detectron2/layers/csrc/nms_rotated/__init__.py' not found (or not a regular file)\n"}
+[1.793773] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/detectron2/detectron2/layers/csrc/ROIAlignRotated/__init__.py' not found (or not a regular file)\n"}
+[1.793836] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/models/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size/__init__.py' not found (or not a regular file)\n"}
+[1.793901] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/models/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size/archive/__init__.py' not found (or not a regular file)\n"}
+[1.793966] (grasp_publisher) StderrLine: {'line': b"package init file './grasp_publisher/models/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size/archive/data/__init__.py' not found (or not a regular file)\n"}
+[1.803769] (-) TimerEvent: {}
+[1.810290] (grasp_publisher) StdoutLine: {'line': b"reading manifest file '../../build/grasp_publisher/grasp_publisher.egg-info/SOURCES.txt'\n"}
+[1.848266] (grasp_publisher) StdoutLine: {'line': b"writing manifest file '../../build/grasp_publisher/grasp_publisher.egg-info/SOURCES.txt'\n"}
+[1.849443] (grasp_publisher) StdoutLine: {'line': b'running build\n'}
+[1.849665] (grasp_publisher) StdoutLine: {'line': b'running build_py\n'}
+[1.903890] (-) TimerEvent: {}
+[2.004192] (-) TimerEvent: {}
+[2.052691] (grasp_publisher) StdoutLine: {'line': b'running install\n'}
+[2.053125] (grasp_publisher) StdoutLine: {'line': b'running install_lib\n'}
+[2.104297] (-) TimerEvent: {}
+[2.132887] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/big_vision/big_vision/evaluators/proj/image_text/discriminative_classifier_test.py to discriminative_classifier_test.cpython-310.pyc\n'}
+[2.133242] (grasp_publisher) StderrLine: {'line': b'Sorry: IndentationError: expected an indented block after class definition on line 70 (discriminative_classifier_test.py, line 72)\n'}
+[2.134508] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/big_vision/big_vision/configs/proj/uvim/vqvae_nyu_depth.py to vqvae_nyu_depth.cpython-310.pyc\n'}
+[2.134758] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/big_vision/big_vision/configs/proj/uvim/vqvae_nyu_depth.py", line 39\n'}
+[2.134862] (grasp_publisher) StderrLine: {'line': b"    config.input.data = dict(name='nyu_depth_v2', split='train)\n"}
+[2.134936] (grasp_publisher) StderrLine: {'line': b'                                                        ^\n'}
+[2.135002] (grasp_publisher) StderrLine: {'line': b'SyntaxError: unterminated string literal (detected at line 39)\n'}
+[2.135070] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.138117] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/verbs_in_action/configs/vfc.py to vfc.cpython-310.pyc\n'}
+[2.138407] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/verbs_in_action/configs/vfc.py", line 36\n'}
+[2.138523] (grasp_publisher) StderrLine: {'line': b'    The `train` split should contain hard negative captions in the\n'}
+[2.138630] (grasp_publisher) StderrLine: {'line': b'        ^\n'}
+[2.138675] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.138715] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.138761] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/verbs_in_action/configs/baseline.py to baseline.cpython-310.pyc\n'}
+[2.138812] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/verbs_in_action/configs/baseline.py", line 36\n'}
+[2.138854] (grasp_publisher) StderrLine: {'line': b'    The tables here should be without hard negatives since this is the baseline training.\n'}
+[2.138899] (grasp_publisher) StderrLine: {'line': b'        ^^^^^^\n'}
+[2.138940] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.138979] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.140166] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/layout_denoise/configs/detr.py to detr.cpython-310.pyc\n'}
+[2.140558] (grasp_publisher) StderrLine: {'line': b'Sorry: IndentationError: unexpected indent (detr.py, line 57)\n'}
+[2.142108] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/baselines/centernet/configs/centernet2_ViTDetH_LSJ_25e_ftO365.py to centernet2_ViTDetH_LSJ_25e_ftO365.cpython-310.pyc\n'}
+[2.142676] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/baselines/centernet/configs/centernet2_ViTDetH_LSJ_25e_ftO365.py", line 97\n'}
+[2.142762] (grasp_publisher) StderrLine: {'line': b'    train config centernet2_O365_ViTDetH_LSJ_75e or download at\n'}
+[2.142803] (grasp_publisher) StderrLine: {'line': b'          ^^^^^^\n'}
+[2.142841] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.142878] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.143817] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/streaming_dvc/configs/vid2seq_vitt_streaming_input_output.py to vid2seq_vitt_streaming_input_output.cpython-310.pyc\n'}
+[2.144234] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/streaming_dvc/configs/vid2seq_vitt_streaming_input_output.py", line 99\n'}
+[2.144353] (grasp_publisher) StderrLine: {'line': b'    ml_collections.ConfigDict({\n'}
+[2.144434] (grasp_publisher) StderrLine: {'line': b'                              ^\n'}
+[2.144509] (grasp_publisher) StderrLine: {'line': b"SyntaxError: '{' was never closed\n"}
+[2.144583] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.145542] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/polyvit/configs/polyvit_all.py to polyvit_all.cpython-310.pyc\n'}
+[2.146966] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/polyvit/configs/polyvit_all.py", line 484\n'}
+[2.147111] (grasp_publisher) StderrLine: {'line': b"    'test.rgb.25fps.wav.mel.spec.labels.sst@1024',\n"}
+[2.147202] (grasp_publisher) StderrLine: {'line': b'                                                ^\n'}
+[2.147272] (grasp_publisher) StderrLine: {'line': b"SyntaxError: ':' expected after dictionary key\n"}
+[2.147338] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.149811] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/densevoc/configs/common.py to common.cpython-310.pyc\n'}
+[2.150059] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/densevoc/configs/common.py", line 32\n'}
+[2.150160] (grasp_publisher) StderrLine: {'line': b'    Build VG tf records using `tools/build_vg_tfrecord.py`\n'}
+[2.150221] (grasp_publisher) StderrLine: {'line': b'          ^^\n'}
+[2.150277] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.150336] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.150502] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/vivit/configs/epic_kitchens/vivit_large_factorised_encoder.py to vivit_large_factorised_encoder.cpython-310.pyc\n'}
+[2.151341] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/build/lib/scenic/projects/vivit/configs/epic_kitchens/vivit_large_factorised_encoder.py", line 142\n'}
+[2.151488] (grasp_publisher) StderrLine: {'line': b'    Use a pretrained Kinetics checkpoint, or ImageNet checkpoint\n'}
+[2.151563] (grasp_publisher) StderrLine: {'line': b'        ^\n'}
+[2.151620] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.151681] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.153273] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/verbs_in_action/configs/vfc.py to vfc.cpython-310.pyc\n'}
+[2.153533] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/verbs_in_action/configs/vfc.py", line 36\n'}
+[2.153624] (grasp_publisher) StderrLine: {'line': b'    The `train` split should contain hard negative captions in the\n'}
+[2.153679] (grasp_publisher) StderrLine: {'line': b'        ^\n'}
+[2.153736] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.153831] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.153893] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/verbs_in_action/configs/baseline.py to baseline.cpython-310.pyc\n'}
+[2.153977] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/verbs_in_action/configs/baseline.py", line 36\n'}
+[2.154038] (grasp_publisher) StderrLine: {'line': b'    The tables here should be without hard negatives since this is the baseline training.\n'}
+[2.154102] (grasp_publisher) StderrLine: {'line': b'        ^^^^^^\n'}
+[2.154166] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.154231] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.154875] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/tasseo/datasets/abnormality_baseline_dataset.py to abnormality_baseline_dataset.cpython-310.pyc\n'}
+[2.155125] (grasp_publisher) StderrLine: {'line': b'Sorry: IndentationError: unexpected indent (abnormality_baseline_dataset.py, line 85)\n'}
+[2.156829] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/layout_denoise/configs/detr.py to detr.cpython-310.pyc\n'}
+[2.159452] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/baselines/centernet/configs/centernet2_ViTDetH_LSJ_25e_ftO365.py to centernet2_ViTDetH_LSJ_25e_ftO365.cpython-310.pyc\n'}
+[2.159702] (grasp_publisher) StderrLine: {'line': b'Sorry: IndentationError: unexpected indent (detr.py, line 57)\n'}
+[2.160186] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/baselines/centernet/configs/centernet2_ViTDetH_LSJ_25e_ftO365.py", line 97\n'}
+[2.160277] (grasp_publisher) StderrLine: {'line': b'    train config centernet2_O365_ViTDetH_LSJ_75e or download at\n'}
+[2.160323] (grasp_publisher) StderrLine: {'line': b'          ^^^^^^\n'}
+[2.160383] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.160428] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.162064] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/streaming_dvc/configs/vid2seq_vitt_streaming_input_output.py to vid2seq_vitt_streaming_input_output.cpython-310.pyc\n'}
+[2.162558] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/streaming_dvc/configs/vid2seq_vitt_streaming_input_output.py", line 99\n'}
+[2.162676] (grasp_publisher) StderrLine: {'line': b'    ml_collections.ConfigDict({\n'}
+[2.162751] (grasp_publisher) StderrLine: {'line': b'                              ^\n'}
+[2.162822] (grasp_publisher) StderrLine: {'line': b"SyntaxError: '{' was never closed\n"}
+[2.162892] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.163302] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/av_mae/configs/vggsound/finetune.py to finetune.cpython-310.pyc\n'}
+[2.164234] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/av_mae/configs/vggsound/finetune.py", line 175\n'}
+[2.164397] (grasp_publisher) StderrLine: {'line': b'    NB: Set this path correctly to the pretrained checkpoint\n'}
+[2.164474] (grasp_publisher) StderrLine: {'line': b'            ^^^^\n'}
+[2.164541] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.164608] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.164675] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/av_mae/configs/imagenet/finetune.py to finetune.cpython-310.pyc\n'}
+[2.165364] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/av_mae/configs/imagenet/finetune.py", line 164\n'}
+[2.165498] (grasp_publisher) StderrLine: {'line': b'    NB: Set this path correctly to the pretrained checkpoint\n'}
+[2.165559] (grasp_publisher) StderrLine: {'line': b'            ^^^^\n'}
+[2.165616] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.165670] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.165725] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/av_mae/configs/audioset/finetune.py to finetune.cpython-310.pyc\n'}
+[2.166311] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/av_mae/configs/audioset/finetune.py", line 169\n'}
+[2.166479] (grasp_publisher) StderrLine: {'line': b'    NB: Set this path correctly to the pretrained checkpoint\n'}
+[2.166589] (grasp_publisher) StderrLine: {'line': b'            ^^^^\n'}
+[2.166662] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.166735] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.167575] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/polyvit/configs/polyvit_all.py to polyvit_all.cpython-310.pyc\n'}
+[2.169064] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/polyvit/configs/polyvit_all.py", line 484\n'}
+[2.169200] (grasp_publisher) StderrLine: {'line': b"    'test.rgb.25fps.wav.mel.spec.labels.sst@1024',\n"}
+[2.169263] (grasp_publisher) StderrLine: {'line': b'                                                ^\n'}
+[2.169316] (grasp_publisher) StderrLine: {'line': b"SyntaxError: ':' expected after dictionary key\n"}
+[2.169372] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.169521] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/avatar/generation_trainer.py to generation_trainer.cpython-310.pyc\n'}
+[2.172876] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/avatar/generation_trainer.py", line 534\n'}
+[2.173099] (grasp_publisher) StderrLine: {'line': b'    else:\n'}
+[2.173186] (grasp_publisher) StderrLine: {'line': b'    ^^^^\n'}
+[2.173255] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.173325] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.173775] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/unloc/configs/activitynet_captions/activitynet_cap_linspace_unloc_base_fpn.py to activitynet_cap_linspace_unloc_base_fpn.cpython-310.pyc\n'}
+[2.173960] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/unloc/configs/activitynet_captions/activitynet_cap_linspace_unloc_large_fpn.py to activitynet_cap_linspace_unloc_large_fpn.cpython-310.pyc\n'}
+[2.174316] (grasp_publisher) StderrLine: {'line': b'Sorry: IndentationError: unexpected indent (activitynet_cap_linspace_unloc_base_fpn.py, line 80)\n'}
+[2.174406] (grasp_publisher) StderrLine: {'line': b'Sorry: IndentationError: unexpected indent (activitynet_cap_linspace_unloc_large_fpn.py, line 80)\n'}
+[2.176399] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/densevoc/configs/common.py to common.cpython-310.pyc\n'}
+[2.176658] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/densevoc/configs/common.py", line 32\n'}
+[2.176759] (grasp_publisher) StderrLine: {'line': b'    Build VG tf records using `tools/build_vg_tfrecord.py`\n'}
+[2.176835] (grasp_publisher) StderrLine: {'line': b'          ^^\n'}
+[2.176905] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.176974] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.177141] (grasp_publisher) StdoutLine: {'line': b'byte-compiling /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/vivit/configs/epic_kitchens/vivit_large_factorised_encoder.py to vivit_large_factorised_encoder.cpython-310.pyc\n'}
+[2.177791] (grasp_publisher) StderrLine: {'line': b'  File "/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher/scenic/scenic/projects/vivit/configs/epic_kitchens/vivit_large_factorised_encoder.py", line 142\n'}
+[2.177892] (grasp_publisher) StderrLine: {'line': b'    Use a pretrained Kinetics checkpoint, or ImageNet checkpoint\n'}
+[2.177962] (grasp_publisher) StderrLine: {'line': b'        ^\n'}
+[2.178023] (grasp_publisher) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[2.178075] (grasp_publisher) StderrLine: {'line': b'\n'}
+[2.188180] (grasp_publisher) StdoutLine: {'line': b'running install_data\n'}
+[2.188417] (grasp_publisher) StdoutLine: {'line': b'running install_egg_info\n'}
+[2.189981] (grasp_publisher) StdoutLine: {'line': b"removing '/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[2.190385] (grasp_publisher) StdoutLine: {'line': b'Copying ../../build/grasp_publisher/grasp_publisher.egg-info to /home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages/grasp_publisher-0.0.0-py3.10.egg-info\n'}
+[2.191490] (grasp_publisher) StdoutLine: {'line': b'running install_scripts\n'}
+[2.204391] (-) TimerEvent: {}
+[2.207981] (grasp_publisher) StdoutLine: {'line': b'Installing gpt script to /home/yuan/mani_gpt/install/grasp_publisher/lib/grasp_publisher\n'}
+[2.304512] (-) TimerEvent: {}
+[2.364472] (grasp_publisher) StdoutLine: {'line': b"writing list of installed files to '/home/yuan/mani_gpt/build/grasp_publisher/install.log'\n"}
+[2.392685] (grasp_publisher) CommandEnded: {'returncode': 0}
+[2.404601] (-) TimerEvent: {}
+[2.417522] (grasp_publisher) JobEnded: {'identifier': 'grasp_publisher', 'rc': 0}
+[2.504718] (-) TimerEvent: {}
+[2.604979] (-) TimerEvent: {}
+[2.705256] (-) TimerEvent: {}
+[2.805564] (-) TimerEvent: {}
+[2.905829] (-) TimerEvent: {}
+[3.006145] (-) TimerEvent: {}
+[3.101232] (franka_grasp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KGraspSubscriber::GraspSubscriber()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.101407] (franka_grasp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:18:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktranslation\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.101460] (franka_grasp) StderrLine: {'line': b'   18 |       std::array<double, 3> \x1b[01;35m\x1b[Ktranslation\x1b[m\x1b[K = {1,1,1};\n'}
+[3.101502] (franka_grasp) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.101541] (franka_grasp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:19:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Krotation\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.101581] (franka_grasp) StderrLine: {'line': b'   19 |       std::array<double, 4> \x1b[01;35m\x1b[Krotation\x1b[m\x1b[K = {1,1,1,1};\n'}
+[3.101618] (franka_grasp) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.106230] (-) TimerEvent: {}
+[3.109549] (franka_grasp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kint GraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.109711] (franka_grasp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:37:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Ktranslation\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.109761] (franka_grasp) StderrLine: {'line': b'   22 |     int grasp(\x1b[01;35m\x1b[Kstd::array<double, 3> translation\x1b[m\x1b[K, std::array<double, 4> rotation) {\n'}
+[3.109803] (franka_grasp) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.109842] (franka_grasp) StderrLine: {'line': b'\x1b[01m\x1b[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:72:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Krotation\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.109898] (franka_grasp) StderrLine: {'line': b'   22 | rasp(std::array<double, 3> translation, \x1b[01;35m\x1b[Kstd::array<double, 4> rotation\x1b[m\x1b[K) {\n'}
+[3.109937] (franka_grasp) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~\x1b[m\x1b[K\n'}
+[3.109974] (franka_grasp) StderrLine: {'line': b'\n'}
+[3.206337] (-) TimerEvent: {}
+[3.306674] (-) TimerEvent: {}
+[3.407035] (-) TimerEvent: {}
+[3.507391] (-) TimerEvent: {}
+[3.607712] (-) TimerEvent: {}
+[3.708052] (-) TimerEvent: {}
+[3.808327] (-) TimerEvent: {}
+[3.908619] (-) TimerEvent: {}
+[4.008923] (-) TimerEvent: {}
+[4.109195] (-) TimerEvent: {}
+[4.209527] (-) TimerEvent: {}
+[4.309895] (-) TimerEvent: {}
+[4.410192] (-) TimerEvent: {}
+[4.510456] (-) TimerEvent: {}
+[4.610732] (-) TimerEvent: {}
+[4.711019] (-) TimerEvent: {}
+[4.811295] (-) TimerEvent: {}
+[4.911609] (-) TimerEvent: {}
+[5.011882] (-) TimerEvent: {}
+[5.112189] (-) TimerEvent: {}
+[5.212574] (-) TimerEvent: {}
+[5.312887] (-) TimerEvent: {}
+[5.413191] (-) TimerEvent: {}
+[5.513550] (-) TimerEvent: {}
+[5.613912] (-) TimerEvent: {}
+[5.714270] (-) TimerEvent: {}
+[5.814529] (-) TimerEvent: {}
+[5.914811] (-) TimerEvent: {}
+[6.015260] (-) TimerEvent: {}
+[6.115589] (-) TimerEvent: {}
+[6.216008] (-) TimerEvent: {}
+[6.316408] (-) TimerEvent: {}
+[6.417287] (-) TimerEvent: {}
+[6.517643] (-) TimerEvent: {}
+[6.618126] (-) TimerEvent: {}
+[6.718739] (-) TimerEvent: {}
+[6.819325] (-) TimerEvent: {}
+[6.919672] (-) TimerEvent: {}
+[7.021509] (-) TimerEvent: {}
+[7.121922] (-) TimerEvent: {}
+[7.222577] (-) TimerEvent: {}
+[7.322945] (-) TimerEvent: {}
+[7.363877] (franka_grasp) StdoutLine: {'line': b'\x1b[32m\x1b[1mLinking CXX executable grasp\x1b[0m\n'}
+[7.423033] (-) TimerEvent: {}
+[7.523469] (-) TimerEvent: {}
+[7.624090] (-) TimerEvent: {}
+[7.691599] (franka_grasp) StdoutLine: {'line': b'Built target grasp\n'}
+[7.699916] (franka_grasp) CommandEnded: {'returncode': 0}
+[7.721917] (franka_grasp) JobProgress: {'identifier': 'franka_grasp', 'progress': 'install'}
+[7.722136] (franka_grasp) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/yuan/mani_gpt/build/franka_grasp'], 'cwd': '/home/yuan/mani_gpt/build/franka_grasp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'yuan'), ('LC_TIME', 'de_DE.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/yuan/mani_gpt/install/grasp_msg/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/yuan'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('SYSTEMD_EXEC_PID', '1386500'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1011/bus'), ('IGNORE_PREEMPT_RT_PRESENCE', '1'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/yuan/mani_gpt/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'yuan'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'yuan'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '4'), ('PATH', '/opt/ros/humble/bin:/home/yuan/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/aegina:@/tmp/.ICE-unix/1380215,unix/aegina:/tmp/.ICE-unix/1380215'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/b3d64fcb_11eb_4744_bb76_b949c2de00ce'), ('XDG_RUNTIME_DIR', '/run/user/1011'), ('DISPLAY', ':3'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1011/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.124'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1011/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/yuan/mani_gpt/install/grasp_publisher:/home/yuan/mani_gpt/install/franka_grasp:/home/yuan/mani_gpt/install/grasp_msg:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1011/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/yuan/mani_gpt/build/franka_grasp'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/yuan/mani_gpt/install/grasp_publisher/lib/python3.10/site-packages:/home/yuan/mani_gpt/install/grasp_msg/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/yuan/mani_gpt/install/grasp_msg:/home/yuan/mani_gpt/install/franka_grasp:/home/yuan/mani_gpt/install/grasp_publisher:/opt/ros/humble')]), 'shell': False}
+[7.724180] (-) TimerEvent: {}
+[7.729321] (franka_grasp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.729486] (franka_grasp) StdoutLine: {'line': b'-- Installing: /home/yuan/mani_gpt/install/franka_grasp/lib/franka_grasp/grasp\n'}
+[7.734659] (franka_grasp) StdoutLine: {'line': b'-- Set runtime path of "/home/yuan/mani_gpt/install/franka_grasp/lib/franka_grasp/grasp" to ""\n'}
+[7.734809] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/ament_index/resource_index/package_run_dependencies/franka_grasp\n'}
+[7.734878] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/ament_index/resource_index/parent_prefix_path/franka_grasp\n'}
+[7.734941] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/environment/ament_prefix_path.sh\n'}
+[7.735002] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/environment/ament_prefix_path.dsv\n'}
+[7.735054] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/environment/path.sh\n'}
+[7.735120] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/environment/path.dsv\n'}
+[7.735173] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/local_setup.bash\n'}
+[7.735224] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/local_setup.sh\n'}
+[7.735289] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/local_setup.zsh\n'}
+[7.735339] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/local_setup.dsv\n'}
+[7.735381] (franka_grasp) StdoutLine: {'line': b'-- Installing: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/package.dsv\n'}
+[7.735423] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/ament_index/resource_index/packages/franka_grasp\n'}
+[7.735463] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/cmake/franka_graspConfig.cmake\n'}
+[7.735502] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/cmake/franka_graspConfig-version.cmake\n'}
+[7.735543] (franka_grasp) StdoutLine: {'line': b'-- Up-to-date: /home/yuan/mani_gpt/install/franka_grasp/share/franka_grasp/package.xml\n'}
+[7.736652] (franka_grasp) CommandEnded: {'returncode': 0}
+[7.768217] (franka_grasp) JobEnded: {'identifier': 'franka_grasp', 'rc': 0}
+[7.768826] (-) EventReactorShutdown: {}

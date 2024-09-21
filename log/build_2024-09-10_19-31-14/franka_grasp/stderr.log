@@ -1,0 +1,14 @@
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In constructor ‘[01m[KGraspSubscriber::GraspSubscriber()[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:18:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kq_buf[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   18 |       std::array<double, 7> [01;35m[Kq_buf[m[K = {1,1,1,1,1,1,1};
+      |                             [01;35m[K^~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In member function ‘[01m[Kint GraspSubscriber::grasp(std::array<double, 7>)[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:110:25:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KMotionGenerator motion_generator[m[K’
+  110 |         MotionGenerator [01;31m[Kmotion_generator[m[K(0.5, q_initial);
+      |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:32:25:[m[K [01;36m[Knote: [m[K‘[01m[KMotionGenerator motion_generator[m[K’ previously declared here
+   32 |         MotionGenerator [01;36m[Kmotion_generator[m[K(0.5, q_initial);                                                        // MotionGenerator 是运动生成器，用于生成使机器人到达目标关节配置的运动轨迹。这里的0.5是运动速度的缩放因子
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/grasp.dir/build.make:76: CMakeFiles/grasp.dir/src/grasp.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/grasp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

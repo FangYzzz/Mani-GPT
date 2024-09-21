@@ -1,0 +1,108 @@
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In constructor ‘[01m[KGraspSubscriber::GraspSubscriber()[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:18:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktranslation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   18 |       std::array<double, 3> [01;35m[Ktranslation[m[K = {1,1,1};
+      |                             [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:19:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krotation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   19 |       std::array<double, 4> [01;35m[Krotation[m[K = {1,1,1,1};
+      |                             [01;35m[K^~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In member function ‘[01m[Kint GraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitial_position[m[K’ was not declared in this scope; did you mean ‘[01m[Kinitial_pose[m[K’?
+  103 |         robot.control([&[01;31m[Kinitial_position[m[K, &time](const franka::RobotState& robot_state,
+      |                         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                         [32m[Kinitial_pose[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In lambda function:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:107:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitial_position[m[K’ is not captured
+  107 |             [01;31m[Kinitial_position[m[K = robot_state.q_d;
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:48:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  103 |         robot.control([&initial_position, &time[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                                [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:25:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>initial_position[m[K’ declared here
+  103 |         robot.control([&[01;36m[Kinitial_position[m[K, &time](const franka::RobotState& robot_state,
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:110:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitial_position[m[K’ is not captured
+  110 |           franka::JointPositions output = {{[01;31m[Kinitial_position[m[K[0], initial_position[1],
+      |                                             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:48:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  103 |         robot.control([&initial_position, &time[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                                [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:25:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>initial_position[m[K’ declared here
+  103 |         robot.control([&[01;36m[Kinitial_position[m[K, &time](const franka::RobotState& robot_state,
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:110:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitial_position[m[K’ is not captured
+  110 |        franka::JointPositions output = {{initial_position[0], [01;31m[Kinitial_position[m[K[1],
+      |                                                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:48:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  103 |         robot.control([&initial_position, &time[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                                [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:25:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>initial_position[m[K’ declared here
+  103 |         robot.control([&[01;36m[Kinitial_position[m[K, &time](const franka::RobotState& robot_state,
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:111:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitial_position[m[K’ is not captured
+  111 |                                             [01;31m[Kinitial_position[m[K[2], initial_position[3] + delta_angle,
+      |                                             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:48:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  103 |         robot.control([&initial_position, &time[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                                [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:25:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>initial_position[m[K’ declared here
+  103 |         robot.control([&[01;36m[Kinitial_position[m[K, &time](const franka::RobotState& robot_state,
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:111:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitial_position[m[K’ is not captured
+  111 |                                          initial_position[2], [01;31m[Kinitial_position[m[K[3] + delta_angle,
+      |                                                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:48:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  103 |         robot.control([&initial_position, &time[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                                [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:25:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>initial_position[m[K’ declared here
+  103 |         robot.control([&[01;36m[Kinitial_position[m[K, &time](const franka::RobotState& robot_state,
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:112:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitial_position[m[K’ is not captured
+  112 |                                             [01;31m[Kinitial_position[m[K[4] + delta_angle, initial_position[5],
+      |                                             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:48:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  103 |         robot.control([&initial_position, &time[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                                [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:25:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>initial_position[m[K’ declared here
+  103 |         robot.control([&[01;36m[Kinitial_position[m[K, &time](const franka::RobotState& robot_state,
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:112:80:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitial_position[m[K’ is not captured
+  112 |                            initial_position[4] + delta_angle, [01;31m[Kinitial_position[m[K[5],
+      |                                                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:48:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  103 |         robot.control([&initial_position, &time[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                                [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:25:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>initial_position[m[K’ declared here
+  103 |         robot.control([&[01;36m[Kinitial_position[m[K, &time](const franka::RobotState& robot_state,
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:113:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kinitial_position[m[K’ is not captured
+  113 |                                             [01;31m[Kinitial_position[m[K[6] + delta_angle}};
+      |                                             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:48:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+  103 |         robot.control([&initial_position, &time[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                                [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:103:25:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>initial_position[m[K’ declared here
+  103 |         robot.control([&[01;36m[Kinitial_position[m[K, &time](const franka::RobotState& robot_state,
+      |                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:113:79:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{{<expression error>, <expression error>, <expression error>, <expression error>, <expression error>, <expression error>, <expression error>}}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kfranka::JointPositions[m[K’
+  113 |                                      initial_position[6] + delta_angle}[01;31m[K}[m[K;
+      |                                                                        [01;31m[K^[m[K
+      |                                                                        [01;31m[K|[m[K
+      |                                                                        [01;31m[K<brace-enclosed initializer list>[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In member function ‘[01m[Kint GraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:99:32:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kinitial_pose[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   99 |         std::array<double, 16> [01;35m[Kinitial_pose[m[K;
+      |                                [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:37:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktranslation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   22 |     int grasp([01;35m[Kstd::array<double, 3> translation[m[K, std::array<double, 4> rotation) {
+      |               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:72:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krotation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   22 | rasp(std::array<double, 3> translation, [01;35m[Kstd::array<double, 4> rotation[m[K) {
+      |                                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/grasp.dir/build.make:76: CMakeFiles/grasp.dir/src/grasp.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/grasp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

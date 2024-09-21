@@ -1,0 +1,77 @@
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:131:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kcatch[m[K’
+  131 |       } [01;31m[Kcatch[m[K (const franka::Exception& e) {                                                                   // catch块捕获franka::Exception类型的异常，并输出错误信息
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:135:7:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kreturn[m[K’
+  135 |       [01;31m[Kreturn[m[K 0;
+      |       [01;31m[K^~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:136:6:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+  136 |     }
+      |      [01;31m[K^[m[K
+      |      [32m[K;[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In constructor ‘[01m[KGraspSubscriber::GraspSubscriber()[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:16:7:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscription_[m[K’ was not declared in this scope; did you mean ‘[01m[Krmw_subscription_t[m[K’?
+   16 |       [01;31m[Ksubscription_[m[K = this->create_subscription<grasp_msg::msg::GraspMessage>(
+      |       [01;31m[K^~~~~~~~~~~~~[m[K
+      |       [32m[Krmw_subscription_t[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:17:57:[m[K [01;31m[Kerror: [m[K‘[01m[Ktopic_callback[m[K’ is not a member of ‘[01m[KGraspSubscriber[m[K’
+   17 |       "grasp_position", 10, std::bind(&GraspSubscriber::[01;31m[Ktopic_callback[m[K, this, std::placeholders::_1));
+      |                                                         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:18:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kq_buf[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   18 |       std::array<double, 7> [01;35m[Kq_buf[m[K = {1,1,1,1,1,1,1};
+      |                             [01;35m[K^~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In member function ‘[01m[Kint GraspSubscriber::grasp(std::array<double, 7>)[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:68:25:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[KMotionGenerator motion_generator2[m[K’
+   68 |         MotionGenerator [01;31m[Kmotion_generator2[m[K(0.1, q_goal);
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:64:25:[m[K [01;36m[Knote: [m[K‘[01m[KMotionGenerator motion_generator2[m[K’ previously declared here
+   64 |         MotionGenerator [01;36m[Kmotion_generator2[m[K(0.1, q_goal);
+      |                         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:78:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[Kcatch[m[K’ before ‘[01m[Kgrasping_width[m[K’
+   78 |         double [01;31m[Kgrasping_width[m[K =0.10;
+      |                [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:78:16:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[Kgrasping_width[m[K’
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:78:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrasping_width[m[K’ does not name a type
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:78:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K=[m[K’ token
+   78 |         double grasping_width [01;31m[K=[m[K0.10;
+      |                               [01;31m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:78:16:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+   78 |         double [01;36m[Kgrasping_width[m[K =0.10;
+      |                [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:78:31:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[K=[m[K’ token
+   78 |         double grasping_width [01;31m[K=[m[K0.10;
+      |                               [01;31m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:78:31:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K=[m[K’ token
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:85:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kgripper[m[K’ was not declared in this scope
+   85 |         [01;31m[Kgripper[m[K.homing();
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:89:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrasping_width[m[K’ was not declared in this scope
+   89 |         if (gripper_state.max_width < [01;31m[Kgrasping_width[m[K) {
+      |                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:94:11:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot[m[K’ was not declared in this scope
+   94 |           [01;31m[Krobot[m[K.control(motion_generator3);
+      |           [01;31m[K^~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:99:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kgrasping_width[m[K’ was not declared in this scope
+   99 |         if (!gripper.grasp([01;31m[Kgrasping_width[m[K, 0.1, 0.1)) {
+      |                            [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:104:11:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot[m[K’ was not declared in this scope
+  104 |           [01;31m[Krobot[m[K.control(motion_generator3);
+      |           [01;31m[K^~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:116:11:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot[m[K’ was not declared in this scope
+  116 |           [01;31m[Krobot[m[K.control(motion_generator3);
+      |           [01;31m[K^~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:127:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krobot[m[K’ was not declared in this scope
+  127 |         [01;31m[Krobot[m[K.control(motion_generator3);
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:80:14:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Khoming[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   80 |         bool [01;35m[Khoming[m[K;
+      |              [01;35m[K^~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K At global scope:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:137:3:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kprivate[m[K’
+  137 |   [01;31m[Kprivate[m[K:
+      |   [01;31m[K^~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:144:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  144 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/grasp.dir/build.make:76: CMakeFiles/grasp.dir/src/grasp.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/grasp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

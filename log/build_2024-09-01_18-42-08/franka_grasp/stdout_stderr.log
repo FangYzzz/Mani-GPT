@@ -1,0 +1,82 @@
+[ 50%] Built target examples_common
+[ 75%] [32mBuilding CXX object CMakeFiles/grasp.dir/src/grasp.cpp.o[0m
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In constructor ‘[01m[KGraspSubscriber::GraspSubscriber()[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:18:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktranslation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   18 |       std::array<double, 3> [01;35m[Ktranslation[m[K = {1,1,1};
+      |                             [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:19:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krotation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   19 |       std::array<double, 4> [01;35m[Krotation[m[K = {1,1,1,1};
+      |                             [01;35m[K^~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In lambda function:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:80:64:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Krobot_state[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   80 |      robot.control([&target_pose]([01;35m[Kconst franka::RobotState& robot_state[m[K) -> franka::CartesianPose {
+      |                                   [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In member function ‘[01m[Kint GraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:80:22:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kfranka::Robot::control(GraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)::<lambda(const franka::RobotState&)>)[m[K’
+   80 |         [01;31m[Krobot.control([&target_pose](const franka::RobotState& robot_state) -> franka::CartesianPose {[m[K
+      |         [01;31m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   81 | [01;31m[K          // Return the target pose directly[m[K
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   82 | [01;31m[K          std::cout << std::endl << "Moving to target pose..." << std::endl;[m[K
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   83 | [01;31m[K          return franka::MotionFinished(target_pose);[m[K
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+   84 | [01;31m[K        })[m[K;
+      |         [01;31m[K~~[m[K            
+In file included from [01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:4[m[K:
+[01m[K/usr/include/franka/robot.h:171:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid franka::Robot::control(std::function<franka::Torques(const franka::RobotState&, franka::Duration)>, bool, double)[m[K’
+  171 |   void [01;36m[Kcontrol[m[K(std::function<Torques(const RobotState&, franka::Duration)> control_callback,
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/robot.h:171:76:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KGraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)::<lambda(const franka::RobotState&)>[m[K’ to ‘[01m[Kstd::function<franka::Torques(const franka::RobotState&, franka::Duration)>[m[K’
+  171 | [01;36m[Kstd::function<Torques(const RobotState&, franka::Duration)> control_callback[m[K,
+      | [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+
+[01m[K/usr/include/franka/robot.h:199:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid franka::Robot::control(std::function<franka::Torques(const franka::RobotState&, franka::Duration)>, std::function<franka::JointPositions(const franka::RobotState&, franka::Duration)>, bool, double)[m[K’
+  199 |   void [01;36m[Kcontrol[m[K(
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/robot.h:199:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[01m[K/usr/include/franka/robot.h:229:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid franka::Robot::control(std::function<franka::Torques(const franka::RobotState&, franka::Duration)>, std::function<franka::JointVelocities(const franka::RobotState&, franka::Duration)>, bool, double)[m[K’
+  229 |   void [01;36m[Kcontrol[m[K(
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/robot.h:229:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[01m[K/usr/include/franka/robot.h:259:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid franka::Robot::control(std::function<franka::Torques(const franka::RobotState&, franka::Duration)>, std::function<franka::CartesianPose(const franka::RobotState&, franka::Duration)>, bool, double)[m[K’
+  259 |   void [01;36m[Kcontrol[m[K(
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/robot.h:259:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[01m[K/usr/include/franka/robot.h:289:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid franka::Robot::control(std::function<franka::Torques(const franka::RobotState&, franka::Duration)>, std::function<franka::CartesianVelocities(const franka::RobotState&, franka::Duration)>, bool, double)[m[K’
+  289 |   void [01;36m[Kcontrol[m[K(std::function<Torques(const RobotState&, franka::Duration)> control_callback,
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/robot.h:289:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 1 provided
+[01m[K/usr/include/franka/robot.h:317:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid franka::Robot::control(std::function<franka::JointPositions(const franka::RobotState&, franka::Duration)>, franka::ControllerMode, bool, double)[m[K’
+  317 |   void [01;36m[Kcontrol[m[K(
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/robot.h:318:74:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KGraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)::<lambda(const franka::RobotState&)>[m[K’ to ‘[01m[Kstd::function<franka::JointPositions(const franka::RobotState&, franka::Duration)>[m[K’
+  318 | [01;36m[Knction<JointPositions(const RobotState&, franka::Duration)> motion_generator_callback[m[K,
+      | [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/usr/include/franka/robot.h:345:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid franka::Robot::control(std::function<franka::JointVelocities(const franka::RobotState&, franka::Duration)>, franka::ControllerMode, bool, double)[m[K’
+  345 |   void [01;36m[Kcontrol[m[K(
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/robot.h:346:75:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KGraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)::<lambda(const franka::RobotState&)>[m[K’ to ‘[01m[Kstd::function<franka::JointVelocities(const franka::RobotState&, franka::Duration)>[m[K’
+  346 | [01;36m[Kction<JointVelocities(const RobotState&, franka::Duration)> motion_generator_callback[m[K,
+      | [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/usr/include/franka/robot.h:373:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid franka::Robot::control(std::function<franka::CartesianPose(const franka::RobotState&, franka::Duration)>, franka::ControllerMode, bool, double)[m[K’
+  373 |   void [01;36m[Kcontrol[m[K(
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/robot.h:374:73:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KGraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)::<lambda(const franka::RobotState&)>[m[K’ to ‘[01m[Kstd::function<franka::CartesianPose(const franka::RobotState&, franka::Duration)>[m[K’
+  374 | [01;36m[Kunction<CartesianPose(const RobotState&, franka::Duration)> motion_generator_callback[m[K,
+      | [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/usr/include/franka/robot.h:401:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid franka::Robot::control(std::function<franka::CartesianVelocities(const franka::RobotState&, franka::Duration)>, franka::ControllerMode, bool, double)[m[K’
+  401 |   void [01;36m[Kcontrol[m[K(std::function<CartesianVelocities(const RobotState&, franka::Duration)>
+      |        [01;36m[K^~~~~~~[m[K
+[01m[K/usr/include/franka/robot.h:402:20:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[KGraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)::<lambda(const franka::RobotState&)>[m[K’ to ‘[01m[Kstd::function<franka::CartesianVelocities(const franka::RobotState&, franka::Duration)>[m[K’
+  401 |   void control([01;36m[Kstd::function<CartesianVelocities(const RobotState&, franka::Duration)>[m[K
+      |                [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  402 | [01;36m[K                   motion_generator_callback[m[K,
+      |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/grasp.dir/build.make:76: CMakeFiles/grasp.dir/src/grasp.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/grasp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

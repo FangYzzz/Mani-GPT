@@ -1,0 +1,92 @@
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In constructor ‘[01m[KGraspSubscriber::GraspSubscriber()[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:18:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktranslation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   18 |       std::array<double, 3> [01;35m[Ktranslation[m[K = {1,1,1};
+      |                             [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:19:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krotation[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   19 |       std::array<double, 4> [01;35m[Krotation[m[K = {1,1,1,1};
+      |                             [01;35m[K^~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In member function ‘[01m[Kint GraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:24:59:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K][m[K’ token
+   24 |       std::cerr << "grasps translation:\n" << translation[[01;31m[K][m[K << "\ngrasps rotation:\n" << rotation[];
+      |                                                           [01;31m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:24:99:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K][m[K’ token
+   24 | translation:\n" << translation[] << "\ngrasps rotation:\n" << rotation[[01;31m[K][m[K;
+      |                                                                        [01;31m[K^[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In lambda function:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:106:39:[m[K [01;31m[Kerror: [m[K‘[01m[Krotation[m[K’ is not captured
+  106 |         Eigen::Quaterniond quaternion([01;31m[Krotation[m[K[0], rotation[1], rotation[2], rotation[3]);
+      |                                       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:90:44:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   90 |         robot.control([&time, &initial_pose[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                            [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:72:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::array<double, 4> rotation[m[K’ declared here
+   22 | rasp(std::array<double, 3> translation, [01;36m[Kstd::array<double, 4> rotation[m[K) {
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:106:52:[m[K [01;31m[Kerror: [m[K‘[01m[Krotation[m[K’ is not captured
+  106 |         Eigen::Quaterniond quaternion(rotation[0], [01;31m[Krotation[m[K[1], rotation[2], rotation[3]);
+      |                                                    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:90:44:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   90 |         robot.control([&time, &initial_pose[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                            [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:72:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::array<double, 4> rotation[m[K’ declared here
+   22 | rasp(std::array<double, 3> translation, [01;36m[Kstd::array<double, 4> rotation[m[K) {
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:106:65:[m[K [01;31m[Kerror: [m[K‘[01m[Krotation[m[K’ is not captured
+  106 |       Eigen::Quaterniond quaternion(rotation[0], rotation[1], [01;31m[Krotation[m[K[2], rotation[3]);
+      |                                                               [01;31m[K^~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:90:44:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   90 |         robot.control([&time, &initial_pose[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                            [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:72:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::array<double, 4> rotation[m[K’ declared here
+   22 | rasp(std::array<double, 3> translation, [01;36m[Kstd::array<double, 4> rotation[m[K) {
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:106:78:[m[K [01;31m[Kerror: [m[K‘[01m[Krotation[m[K’ is not captured
+  106 | Quaterniond quaternion(rotation[0], rotation[1], rotation[2], [01;31m[Krotation[m[K[3]);
+      |                                                               [01;31m[K^~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:90:44:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   90 |         robot.control([&time, &initial_pose[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                            [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:72:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::array<double, 4> rotation[m[K’ declared here
+   22 | rasp(std::array<double, 3> translation, [01;36m[Kstd::array<double, 4> rotation[m[K) {
+      |                                         [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:121:27:[m[K [01;31m[Kerror: [m[K‘[01m[Ktranslation[m[K’ is not captured
+  121 |         target_pose[12] = [01;31m[Ktranslation[m[K[0];
+      |                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:90:44:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   90 |         robot.control([&time, &initial_pose[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                            [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:37:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::array<double, 3> translation[m[K’ declared here
+   22 |     int grasp([01;36m[Kstd::array<double, 3> translation[m[K, std::array<double, 4> rotation) {
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:122:27:[m[K [01;31m[Kerror: [m[K‘[01m[Ktranslation[m[K’ is not captured
+  122 |         target_pose[13] = [01;31m[Ktranslation[m[K[1];
+      |                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:90:44:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   90 |         robot.control([&time, &initial_pose[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                            [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:37:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::array<double, 3> translation[m[K’ declared here
+   22 |     int grasp([01;36m[Kstd::array<double, 3> translation[m[K, std::array<double, 4> rotation) {
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:123:27:[m[K [01;31m[Kerror: [m[K‘[01m[Ktranslation[m[K’ is not captured
+  123 |         target_pose[14] = [01;31m[Ktranslation[m[K[2];
+      |                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:90:44:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   90 |         robot.control([&time, &initial_pose[01;36m[K][m[K(const franka::RobotState& robot_state,
+      |                                            [01;36m[K^[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:22:37:[m[K [01;36m[Knote: [m[K‘[01m[Kstd::array<double, 3> translation[m[K’ declared here
+   22 |     int grasp([01;36m[Kstd::array<double, 3> translation[m[K, std::array<double, 4> rotation) {
+      |               [01;36m[K~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:[m[K In member function ‘[01m[Kint GraspSubscriber::grasp(std::array<double, 3>, std::array<double, 4>)[m[K’:
+[01m[K/home/yuan/mani_gpt/src/franka_grasp/src/grasp.cpp:54:32:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktarget_pose[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+   54 |         std::array<double, 16> [01;35m[Ktarget_pose[m[K = {{
+      |                                [01;35m[K^~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/grasp.dir/build.make:76: CMakeFiles/grasp.dir/src/grasp.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/grasp.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
