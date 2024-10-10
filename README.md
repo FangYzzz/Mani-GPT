@@ -12,6 +12,7 @@ ros2 pkg create --build-type ament_python <package_name>
 
 cd package_name/package_name
 
+```
 # Install owl-it
 
 git clone https://github.com/google-research/scenic.git
@@ -41,4 +42,3 @@ pip install -e .
 4. Download the [data](https://utexas.box.com/s/h3ferwjhuzy6ja8bzcm3nu9xq1wkn94s), then unzip and place the data folder under the repo's root. Pretrained models of GIGA, GIGA-Aff and VGN are in `data/models`.
 
 
-```
