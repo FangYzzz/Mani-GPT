@@ -14,12 +14,12 @@ cd package_name/package_name
 
 ```
 # Install owl-it
-
+```
 git clone https://github.com/google-research/scenic.git
 cd ~/scenic
 python -m pip install -vq .
 python -m pip install -r scenic/projects/owl_vit/requirements.txt
-
+```
 # For GPU support:
 pip install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 
