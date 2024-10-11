@@ -49,16 +49,18 @@ You need to apply a ChatGPT API key to integrate and use ChatGPT in your code. Y
 
 
 # Result
-|grasp banana|
-|---|
+grasp banana
+---
 <img src="./assets/videos/banana.gif" alt="005" style="zoom: 70%;" />
 
-|grasp spoon|
-|---|
+===
+grasp spoon
+---
 <img src="./assets/videos/spoon.gif" alt="005" style="zoom: 70%;" />
 
-|grasp pepper|
-|---|
+===
+grasp pepper
+---
 <img src="./assets/videos/pepper.gif" alt="005" style="zoom: 70%;" />
 
 
