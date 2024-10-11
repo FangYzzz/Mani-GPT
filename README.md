@@ -41,4 +41,21 @@ pip install -e .
 
 4. Download the [data](https://utexas.box.com/s/h3ferwjhuzy6ja8bzcm3nu9xq1wkn94s), then unzip and place the data folder under the repo's root. Pretrained models of GIGA, GIGA-Aff and VGN are in `data/models`.
 
+## ChatGPT API
+
+You need to apply a ChatGPT API key to integrate and use ChatGPT in your code. You can find the tutorial at the link below.
+[ChatGPT API](https://platform.openai.com/docs/api-reference/introduction)
+
+
+
+# Result
+
+[Watch the demo video](./assets/videos/grasp_banana.mp4)
+
+
+
+
+
+
+
 
