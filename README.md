@@ -13,7 +13,7 @@ ros2 pkg create --build-type ament_python <package_name>
 cd package_name/package_name
 
 ```
-# Install owl-it
+## install owl-it
 ```
 git clone https://github.com/google-research/scenic.git
 cd ~/scenic
@@ -24,10 +24,10 @@ python -m pip install -r scenic/projects/owl_vit/requirements.txt
 pip install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
 ```
 ---
-# install Detic
+## install Detic
 [https://github.com/facebookresearch/Detic/blob/main/docs/INSTALL.md](https://github.com/facebookresearch/Detic/blob/main/docs/INSTALL.md)
 
-# install GIGA
+## install GIGA
 
 1. Install packages list in [requirements.txt](requirements.txt). Then install `torch-scatter` following [here](https://github.com/rusty1s/pytorch_scatter), based on `pytorch` version and `cuda` version.
 
