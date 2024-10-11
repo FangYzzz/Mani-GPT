@@ -50,8 +50,7 @@ You need to apply a ChatGPT API key to integrate and use ChatGPT in your code. Y
 
 # Result
 
-[Watch the demo video](./assets/videos/grasp_banana.mp4)
-
+<img src="./assets/videos/grasp_banana.mp4" alt="005" style="zoom: 70%;" />
 
 
 
