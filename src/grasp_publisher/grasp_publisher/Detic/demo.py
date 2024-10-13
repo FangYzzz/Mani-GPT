@@ -11,12 +11,10 @@ import cv2
 import tqdm
 import sys
 import mss
-# sys.path.append('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/detectron2/detectron2/')
 from grasp_publisher.detectron2.detectron2.config import get_cfg
 from grasp_publisher.detectron2.detectron2.data.detection_utils import read_image
 from grasp_publisher.detectron2.detectron2.utils.logger import setup_logger
 
-# sys.path.insert(0, '/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/Detic/third_party/CenterNet2/')
 from grasp_publisher.Detic.third_party.CenterNet2.centernet.config import add_centernet_config
 from grasp_publisher.Detic.detic.config import add_detic_config
 
@@ -67,7 +65,7 @@ def get_parser():
     parser.add_argument(
         "--config-file",
         # default="configs/quick_schedules/mask_rcnn_R_50_FPN_inference_acc_test.yaml",         
-        default="/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/Detic/configs/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.yaml",        # 00000
+        default="./src/grasp_publisher/grasp_publisher/Detic/configs/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.yaml",        # 00000
         metavar="FILE",
         help="path to config file",
     )
@@ -77,21 +75,14 @@ def get_parser():
     parser.add_argument(
         "--input",
         nargs="+",
-        default=['/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image0.png'],                    # 00000 
-        # default=['/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image00.png'],                   #####
-        # default=['/home/yuan/Mani-GPT/camera_capture/lab/ZED_image0.png'],                         
-        # default=['/home/yuan/Mani-GPT/camera_capture/lab/ZED_image5.png'],                     
+        default=['./src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image0.png'],                   
+                    
         help="A list of space separated input images; "
         "or a single glob pattern such as 'directory/*.jpg'",
     )
     parser.add_argument(
         "--output",
-        # default="/home/yuan/Mani-GPT/camera_capture/1_object_detection_lvis.jpeg",            
-        default='/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image0_custom.png',             # 00000
-        # default='/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image00_custom.png',            #####
-        # default=['/home/yuan/Mani-GPT/camera_capture/lab/ZED_image0_custom.png'],             
-        # default="/home/yuan/Mani-GPT/camera_capture/lab/ZED_image5_custom.png",              
-        # default="/home/yuan/Mani-GPT/camera_capture/6_object_detection_custom.jpeg",          
+        default='./src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image0_custom.png',             
         help="A file or directory to save output visualizations. "
         "If not given, will show output in an OpenCV window.",
     )
@@ -99,7 +90,7 @@ def get_parser():
         "--vocabulary",
         # default="lvis",
         # default="openimages",                                                                 
-        default="custom",                                                                       #####
+        default="custom",                                                                       
         choices=['lvis', 'openimages', 'objects365', 'coco', 'custom'],  
         help="",
     )
@@ -163,7 +154,7 @@ def get_parser():
         "--opts",
         help="Modify config options using the command-line 'KEY VALUE' pairs",
         # default=[],                                                                                                     
-        default=["MODEL.WEIGHTS","/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/models/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.pth"],    # 11111
+        default=["MODEL.WEIGHTS","./src/grasp_publisher/grasp_publisher/models/Detic_LCOCOI21k_CLIP_SwinB_896b32_4x_ft4x_max-size.pth"],    # 11111
         nargs=argparse.REMAINDER,
     )
     return parser
@@ -187,7 +178,7 @@ def test_opencv_video_format(codec, file_ext):
 
 
 
-def detect_exist_objects():                                                              # 11111
+def detect_exist_objects():                                                              
     mp.set_start_method("spawn", force=True)
     args = get_parser().parse_args()
     setup_logger(name="fvcore")
@@ -206,7 +197,7 @@ def detect_exist_objects():                                                     
         for path in tqdm.tqdm(args.input, disable=not args.output):
             img = read_image(path, format="BGR")
             start_time = time.time()
-            predictions, visualized_output, labels_onlyclass = demo.run_on_image(img)    # 11111
+            predictions, visualized_output, labels_onlyclass = demo.run_on_image(img)   
             logger.info(
                 "{}: {} in {:.2f}s".format(
                     path,
@@ -306,16 +297,6 @@ def detect_exist_objects():                                                     
     print(exist_object_prompt)
 
     # return labels_onlyclass
-    return exist_object_prompt                                                            # 11111
+    return exist_object_prompt                                                           
 
 
-
-# detect_exist_objects()
-
-
-
-
-# filename_input = os.path.join('/home/yuan/Mani-GPT/camera_capture/1.png')
-# path, filename = os.path.split(filename_input)
-# new_filename = filename.replace('.png', '_openimages.png')
-# filename_output = os.path.join(path, new_filename)

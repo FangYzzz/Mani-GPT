@@ -46,7 +46,13 @@ pip install -e .
 You need to apply a ChatGPT API key to integrate and use ChatGPT in your code. You can find the tutorial at the link below.
 [ChatGPT API](https://platform.openai.com/docs/api-reference/introduction)
 
+# Execution
 
+```
+ros2 run grasp_publisher gpt
+
+ros2 run franka_grasp grasp
+```
 
 # Result
 grasp banana

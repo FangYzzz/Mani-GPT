@@ -31,7 +31,7 @@ def gpt_grasp_part(grasp_object):
     openai.api_key = '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'
 
     msg = {'role':'user', 
-           'content': "If you want to pick up " + grasp_object + ", which part makes the most sense to grasp? Name one part, for example anser 'handle' not 'the handle of spoon'. If the grasp object fruit or vegetable is, the grasp part is the object itself, for example if grasp 'pepper' then anser 'pepper'."}
+           'content': "If you want to pick up " + grasp_object + ", which part makes the most sense to grasp? Name one part, for example answer 'handle' not 'the handle of spoon'. If the grasp object is fruit or vegetable, the grasp part is the object itself, for example if grasp 'pepper' then answer 'pepper'."}
     result = openai.ChatCompletion.create(model='gpt-4', messages=[msg])      # gpt-3.5-turbo
     grasp_part = result.choices[0].message['content']
     print(f"(Grasp part: {grasp_part})")
@@ -98,8 +98,6 @@ def gpt_dialogue(grasp_publisher):
     response_2 = get_chatgpt_response(message)
     message.append({"role": "assistant", "content": response_2})
     # print(f"ChatGPT2: {response_2}")
-
-
 
     input("Type 'q' to end the conversation")
     while True:
