@@ -3,8 +3,8 @@ import sys
 import os     
 
 # sys.path.append('big_vision/')
-sys.path.append('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/big_vision')
-sys.path.append('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/ik.py')
+sys.path.append('./src/grasp_publisher/grasp_publisher/big_vision')
+sys.path.append('./src/grasp_publisher/grasp_publisher/ik.py')
 
 # !echo "Done."
 
@@ -24,14 +24,10 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
-# import camera_capture               # 999
-# import ik                           # 999
-# import point_cloud_grasp_sample     # 999
 
 
 
-
-def prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_=0, cy_=0, original_padding_image=None, width_ =0, height_=0):
+def prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_=0, cy_=0, original_image=None, width_ =0, height_=0):
     
     jitted = jax.jit(module.apply, static_argnames=('train',)) 
     
@@ -58,7 +54,7 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
 
     if(crop==False):
         fig, ax = plt.subplots(1, 1, figsize=(8, 8))
-        ax.imshow(original_padding_image, extent=(0, 1, 1, 0))   
+        ax.imshow(original_image, extent=(0, 1, 1, 0))   
         ax.set_axis_off()
 
     for score, box, label in zip(scores, boxes, labels):
@@ -82,10 +78,8 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
             # Convert the cropped NumPy array to a Pillow image object
             cropped_image = Image.fromarray((cropped_image_array * 255).astype(np.uint8))
 
-            cropped_image.save(os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image0.png'))    # 00000
-            # cropped_image.save(os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image01.png'))   #####
-            # cropped_image.save(os.path.join('/home/yuan/Mani-GPT/camera_capture/lab/cropped_mug.png'))                        
-            # cropped_image.show()
+            cropped_image.save(os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image0.png'))    
+
             
             height_c, width_c,_= cropped_image_array.shape
             print("croped image:", height_c, width_c)
@@ -94,8 +88,8 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
         
         else:
             cx, cy, w, h = box
-            img_height, img_width, _ = input_image.shape
-            img_height_, img_width_, _ = original_padding_image.shape
+            # img_height, img_width, _ = input_image.shape
+            img_height_, img_width_, _ = original_image.shape
             # print(img_height, img_width, img_height_, img_width_)
 
             size = max(height_, width_)
@@ -123,11 +117,7 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
                     'edgecolor': 'red',
                     'boxstyle': 'square,pad=.3'
                 })
-            plt.savefig(os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image0_1.png'))             # 00000
-            # plt.savefig(os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image01_1.png'))            #####
-            # plt.savefig(os.path.join('/home/yuan/Mani-GPT/camera_capture/lab/cropped_mug_1.png'))                        
-            # plt.savefig(os.path.join('/home/yuan/Mani-GPT/camera_capture/lab/cropped_mug-handle_1.png'))                   
-            # plt.savefig(os.path.join('/home/yuan/Mani-GPT/camera_capture/lab/cropped_4_fryingpan-handle_1.png'))         
+            plt.savefig(os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image0_1.png'))                     
             
             # plt.show()  
             return cx, cy, w, h
@@ -154,21 +144,17 @@ def detect_grasp_name(grasp_name, crop, cx_=0, cy_=0, original_padding_image=Non
 
     """# Prepare image"""
 
-    # filepath = camera_capture.zed()                                                                           # 999
+    # filepath = camera_capture.zed()                                                                           
     # zed()
 
     # Load example image:
     if crop == True:
-        filename_input = os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image0.png')               # 00000
-        # filename_input = os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image01.png')              #####
-        # filename_input = os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image00.png')              #####
-        # filename_input = os.path.join('/home/yuan/Mani-GPT/camera_capture/lab/ZED_mug.png')                  
+        filename_input = os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image0.png')               
+
         
     else:
-        filename_input = os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image0.png')           # 00000
-        # filename_input = os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image01.png')          #####
-        # filename_input = os.path.join('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image00.png')          #####
-        # filename_input = os.path.join('/home/yuan/Mani-GPT/camera_capture/lab/cropped_mug.png')              
+        filename_input = os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image0.png')         
+    
 
     image_uint8 = skimage_io.imread(filename_input)
     image = image_uint8.astype(np.float32) / 255.0
@@ -215,39 +201,10 @@ def detect_grasp_name(grasp_name, crop, cx_=0, cy_=0, original_padding_image=Non
         return original_padding_image, cx, cy, w, h, height, width
     else:
         ## sub fig
-        cx, cy, w, h = prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_, cy_, original_padding_image, width_=width, height_=height)
+        cx, cy, w, h = prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_, cy_, image, width_=width, height_=height)
         return cx, cy, w, h
 
 
 
-# grasp_object = 'pepper'                                                             # image0_pepper
-# grasp_object = 'tomato'                                                             # image0_tomato
-# grasp_object = 'carrot'                                                             # image0_carrot_fat
-# grasp_object = 'plate'                                                              # image0_plate
-# grasp_object = 'tea pot'                                                            # image0_teapot
-# grasp_object = 'spoon'                                                             # image0_frying pan
-
-
-# grasp_object = 'pepper'                                                             # image5_pepper
-# grasp_object = 'plate'                                                              # image5_plate
-# grasp_object = 'cup'                                                                # image5_cup
-# grasp_object = 'tea pot'                                                            # image5_teapot
-# grasp_object = 'frying pan'                                                         # image4_frying_pan
-# grasp_object = 'mug'                                                                # image4_mug
-
-# grasp_part = 'The handle'
-# grasp_part = 'carrot'
-    
-
-# crop = True
-# original_padding_image, cx, cy, w, h, height, width = detect_grasp_name(grasp_object, crop)
-
-# crop = False
-# cx, cy, w, h = detect_grasp_name(grasp_part, crop, cx, cy, original_padding_image, height, width)
-
-
-# grasps_translation, grasps_rotation = point_cloud_grasp_sample.get_GraspSample(cx, cy, w, h)
-
-# q_buf = ik(cx, cy, w, h)
 
 

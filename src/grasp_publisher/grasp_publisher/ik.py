@@ -225,17 +225,9 @@ class IK:
 
             q6_generated = []
             for theta2_i in [theta2, -theta2]:
-                # thetaOffset = np.arctan(self.d3/self.a3) + np.arctan(self.d5/self.a3)
-                # thetaOffset = np.arcsin([(A * (np.sin(thetaOffset) / C))])
-                # theta1Comp = (np.abs(np.arctan([np.linalg.norm(o62[z]-o65[z])/np.linalg.norm(o62[x]-o65[x])])) + np.abs(np.arcsin([(A * (np.sin(theta2_i) / C))]) - thetaOffset))
-                # q6 = np.append(q6, [self.angleRound(np.pi - theta1Comp - np.pi/2)])
-                # print(theta2_i)
-                # print(np.arctan(self.a3/self.d5))
-                # print(np.arctan2(A*np.sin(theta2_i), B+A*np.cos(theta2_i)))
+
                 o2o5Angle = np.arctan2(o62[z]-o65[z], o62[x]-o65[x])
-                # print((np.sign(o62[z]-o65[z])*np.linalg.norm(o62[z]-o65[z])))
-                # print((np.sign(o62[x]-o65[x])*np.linalg.norm(o62[x]-o65[x])))
-                # print(o2o5Angle)
+
                 q6_i = self.angleRound(((o2o5Angle + np.arctan(self.a3/self.d5) - np.arctan2(A*np.sin(theta2_i), B+A*np.cos(theta2_i)) - np.pi/2)))
                 q6_generated = np.append(q6_generated, [q6_i])
 

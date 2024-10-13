@@ -1,5 +1,4 @@
 import sys
-# sys.path.append('/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/Detic')
 
 import io
 from PIL import Image
@@ -130,14 +129,6 @@ def gpt_dialogue(grasp_publisher):
             grasp_publisher.grasp_publish(q_buf)
     
 
-    # # image0-pepper
-    # cx = 0.53360814
-    # cy = 0.1430587
-    # w = 0.044790987
-    # h = 0.050874677
-
-    # q_buf = ik.ik(cx, cy, w, h)
-    # grasp_publisher.grasp_publish(q_buf)
             
 
 class GraspPublisher(Node):

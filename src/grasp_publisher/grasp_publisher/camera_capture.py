@@ -9,7 +9,7 @@ import cv2
 help_string = "[s] Save side by side image [d] Save Depth, [n] Change Depth format, [p] Save Point Cloud, [m] Change Point Cloud format, [q] Quit"
 prefix_point_cloud = "Cloud_"
 prefix_depth = "Depth_"
-path = "/home/yuan/mani_gpt/src/grasp_publisher/grasp_publisher/camera_capture/lab/"
+path = "./src/grasp_publisher/grasp_publisher/camera_capture/lab/"
 # path = "./"
 
 count_save = 0
@@ -18,7 +18,7 @@ mode_depth = 0
 point_cloud_format_ext = ".ply"
 depth_format_ext = ".png"
 
-def point_cloud_format_name():     # 根据当前模式获取保存点云数据的文件扩展名
+def point_cloud_format_name():    
     global mode_point_cloud
     if mode_point_cloud > 3:
         mode_point_cloud = 0
@@ -30,7 +30,7 @@ def point_cloud_format_name():     # 根据当前模式获取保存点云数据�
     }
     return switcher.get(mode_point_cloud, "nothing") 
   
-def depth_format_name():     # 根据当前模式获取保存深度图数据的文件扩展名
+def depth_format_name():    
     global mode_depth
     if mode_depth > 2:
         mode_depth = 0
@@ -41,7 +41,7 @@ def depth_format_name():     # 根据当前模式获取保存深度图数据的�
     }
     return switcher.get(mode_depth, "nothing") 
 
-def save_point_cloud(zed, filename) :     # 从 ZED 相机获取点云数据, 将数据保存到带有相应扩展名的文件中, 打印保存是否成功的信息
+def save_point_cloud(zed, filename) :     
     print("Saving Point Cloud...")
     tmp = sl.Mat()
     zed.retrieve_measure(tmp, sl.MEASURE.XYZRGBA)
@@ -51,7 +51,7 @@ def save_point_cloud(zed, filename) :     # 从 ZED 相机获取点云数据, �
     else :
         print("Failed... Please check that you have permissions to write on disk")
 
-def save_depth(zed, filename) :     # 从 ZED 相机获取深度图数据, 将数据保存到带有相应扩展名的文件中, 打印保存是否成功的信息
+def save_depth(zed, filename) :    
     print("Saving Depth Map...")
     tmp = sl.Mat()
     zed.retrieve_measure(tmp, sl.MEASURE.DEPTH)
@@ -61,7 +61,7 @@ def save_depth(zed, filename) :     # 从 ZED 相机获取深度图数据, 将�
     else :
         print("Failed... Please check that you have permissions to write on disk")
 
-def save_sbs_image(zed, filename) :     # 从 ZED 相机获取左图像和右图像, 水平拼接两个图像, 将拼接后的图像保存到文件中
+def save_sbs_image(zed, filename) :     
     print("Saving Left Image...")
 
     image_sl_left = sl.Mat()
@@ -80,7 +80,7 @@ def save_sbs_image(zed, filename) :     # 从 ZED 相机获取左图像和右图
 
 
 
-def process_key_event(zed, key) :                                      # 0
+def process_key_event(zed, key) :                                      
     global mode_depth
     global mode_point_cloud
     global count_save
@@ -184,12 +184,10 @@ def zed():
             image_ocv = image_zed.get_data()
             depth_image_ocv = depth_image_zed.get_data()
 
-            # cv2.imshow("Image", image_ocv)                           # 0
-            # cv2.imshow("Depth", depth_image_ocv)
+
 
             key = cv2.waitKey(10)
 
-            # filepath = process_key_event(zed, key)                   # 0
             filepath = process_key_event(zed)
 
             if filepath != None:
@@ -197,11 +195,7 @@ def zed():
                 zed.close()
                 return filepath
 
-    # cv2.destroyAllWindows()
-    # zed.close()
 
-    # print("\nFINISH")
-    # return filepath
 
 
 
