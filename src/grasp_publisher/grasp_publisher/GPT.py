@@ -26,7 +26,6 @@ def get_grasp_object(assistant_message):
 
     return grasp_object
 
-
 def gpt_grasp_part(grasp_object):
     openai.api_key = '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'
 
@@ -37,8 +36,6 @@ def gpt_grasp_part(grasp_object):
     print(f"(Grasp part: {grasp_part})")
     
     return grasp_part
-
-
 
 def get_chatgpt_response(messages):
     try:
@@ -126,9 +123,6 @@ def gpt_dialogue(grasp_publisher):
             q_buf = ik.ik(cx, cy, w, h)
             grasp_publisher.grasp_publish(q_buf)
     
-
-            
-
 class GraspPublisher(Node):
 
     def __init__(self):

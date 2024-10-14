@@ -12,7 +12,6 @@ import numpy as np
 from scipy.spatial.transform import Rotation as R
 
 
-
 def grasppart_rgbd_to_pc(rgb_image, depth_image, fx, fy, cx_cam, cy_cam, rect_cx, rect_cy, rect_w, rect_h):
     if rgb_image.shape[2] == 4:                                                                 
         rgb_image = rgb_image[:, :, :3]
@@ -78,7 +77,6 @@ def draw_point_cloud(rect_cx, rect_cy, rect_w, rect_h):
         
     depth_image = o3d.io.read_image(depth_image_path)
     depth_image = np.asarray(depth_image)
-
 
     fx, fy = 1057.35, 1056.91
     cx_cam, cy_cam = 1082.06, 637.621

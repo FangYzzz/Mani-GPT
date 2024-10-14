@@ -8,7 +8,6 @@ sys.path.append('./src/grasp_publisher/grasp_publisher/ik.py')
 
 # !echo "Done."
 
-
 import jax
 from matplotlib import pyplot as plt
 import numpy as np
@@ -24,9 +23,6 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
-
-
-
 def prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_=0, cy_=0, original_image=None, width_ =0, height_=0):
     
     jitted = jax.jit(module.apply, static_argnames=('train',)) 
@@ -40,7 +36,6 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
 
     # Remove batch dimension and convert to numpy:
     predictions = jax.tree_util.tree_map(lambda x: np.array(x[0]), predictions)
-
 
     """# Plot predictions"""
 
@@ -77,10 +72,8 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
 
             # Convert the cropped NumPy array to a Pillow image object
             cropped_image = Image.fromarray((cropped_image_array * 255).astype(np.uint8))
-
             cropped_image.save(os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/cropped_image0.png'))    
 
-            
             height_c, width_c,_= cropped_image_array.shape
             print("croped image:", height_c, width_c)
         
@@ -98,7 +91,6 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
             cx = cx_ - 0.5 * width_ / img_width_ + cx * width_ / img_width_
             cy = cy * size / height_
             cy = cy_ - 0.5 * height_ / img_height_ + cy * height_ / img_height_
-
             w = w * size / img_width_
             h = h * size / img_height_
             
