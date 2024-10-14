@@ -36,7 +36,7 @@ pip install --upgrade "jax[cuda]" -f https://storage.googleapis.com/jax-releases
 pip install -e .
 ```
 
-3. Build ConvONets dependent on running `python scripts/convonet_setup.py build_ext --inplace`.
+3. Build ConvONets dependents by running `python scripts/convonet_setup.py build_ext --inplace`.
 
 4. Download the [data](https://utexas.box.com/s/h3ferwjhuzy6ja8bzcm3nu9xq1wkn94s), then unzip and place the data folder under the repo's root. Pretrained models of GIGA, GIGA-Aff and VGN are in `data/models`.
 
@@ -44,6 +44,21 @@ pip install -e .
 
 You need to apply a ChatGPT API key to integrate and use ChatGPT in your code. You can find the tutorial at the link below.
 [ChatGPT API](https://platform.openai.com/docs/api-reference/introduction)
+
+# Camera Calibration
+
+According to the measurement and repeated adjustments, we can get the rotation angle of the camera relative to the robot frame is 217 degrees around the X axis and 90 degrees around the Z axis.
+---
+<img src="./assets/images/camera_calibration.jpg" alt="005" style="zoom: 70%;" />
+
+```
+extrinsic_rotation_x = R.from_quat([0.948, 0, 0, -0.317]).as_matrix()                
+extrinsic_rotation_z = R.from_quat([0, 0, 0.707, 0.707]).as_matrix()                    
+extrinsic_rotation = extrinsic_rotation_z @ extrinsic_rotation_x
+extrinsic_translation = np.array([1.15, 0.04, 0.41])  
+depth_image = depth_image / 2500.0
+```
+
 
 # Execution
 
