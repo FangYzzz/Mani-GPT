@@ -22,14 +22,11 @@ find_package(rosidl_default_generators REQUIRED)  #####
 # further dependencies manually.
 # find_package(<dependency> REQUIRED)
 
-
-# 添加 .msg 文件到消息列表
 set(msg_files
   "msg/JointPos.msg"
   "msg/GraspMessage.msg"
 )
 
-# 调用 rosidl_generate_interfaces
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
 )
