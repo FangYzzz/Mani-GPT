@@ -23,7 +23,7 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import tensorflow as tf
 
-def prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_=0, cy_=0, original_image=None, width_ =0, height_=0):
+def prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_=0, cy_=0, original_padding_image=None, width_ =0, height_=0):
     
     jitted = jax.jit(module.apply, static_argnames=('train',)) 
     
@@ -41,7 +41,7 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
 
     score_threshold = 0.2  
 
-    logits = predictions['pred_logits'][..., :len(text_queries)]            # Remove padding
+    logits = predictions['pred_logits'][..., :len(text_queries)]                     # Remove padding
     scores = sigmoid(np.max(logits, axis=-1))
     labels = np.argmax(predictions['pred_logits'], axis=-1)
     boxes = predictions['pred_boxes']
@@ -49,7 +49,7 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
 
     if(crop==False):
         fig, ax = plt.subplots(1, 1, figsize=(8, 8))
-        ax.imshow(original_image, extent=(0, 1, 1, 0))   
+        ax.imshow(original_padding_image, extent=(0, 1, 1, 0))   
         ax.set_axis_off()
 
     for score, box, label in zip(scores, boxes, labels):
@@ -59,7 +59,7 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
         cx, cy, w, h = box
         if crop == True:                       
             img_height, img_width, _ = input_image.shape
-            print("original padding image:", img_height, img_width)         # input_image = original_padding_image
+            print("original padding image:", img_height, img_width)                  # input_image = original_padding_image
             print("crop = True: cx, cy, w, h: ", cx, cy, w, h)
             
             left = int((cx - w / 2) * img_width)
@@ -81,9 +81,7 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
         
         else:
             cx, cy, w, h = box
-            img_height, img_width, _ = input_image.shape
-            img_height_, img_width_, _ = original_image.shape
-            # print(img_height, img_width, img_height_, img_width_)
+            img_height_, img_width_, _ = original_padding_image.shape
 
             size = max(height_, width_)
             cx = cx*size/width_
@@ -139,17 +137,14 @@ def detect_grasp_name(grasp_name, crop, cx_=0, cy_=0, original_padding_image=Non
     # Load example image:
     if crop == True:
         filename_input = os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/ZED_image0.png')               
-
-        
     else:
         filename_input = os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/cropped_image0.png')         
-    
 
     image_uint8 = skimage_io.imread(filename_input)
     image = image_uint8.astype(np.float32) / 255.0
     # print(image.shape)
 
-    if image.shape[2] == 4:                                                                              # astronaut(512,512,3) ZED(1080,1920,4)
+    if image.shape[2] == 4:                                                          # original image(512,512,3) ZED image(1080,1920,4)
         image = image[:, :, :3]
     # print(image.shape)
 
@@ -183,11 +178,11 @@ def detect_grasp_name(grasp_name, crop, cx_=0, cy_=0, original_padding_image=Non
         constant_values=0)
 
     if crop== True:
-        original_image, cx, cy, w, h, height, width = prediction(module, variables, input_image, tokenized_queries, text_queries, crop)
-        return original_image, cx, cy, w, h, height, width
+        original_padding_image, cx, cy, w, h, height, width = prediction(module, variables, input_image, tokenized_queries, text_queries, crop)
+        return original_padding_image, cx, cy, w, h, height, width
     else:
         ## sub fig
-        cx, cy, w, h = prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_, cy_, original_image, width_=width, height_=height)
+        cx, cy, w, h = prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_, cy_, original_padding_image, width_=width, height_=height)
         return cx, cy, w, h
 
 

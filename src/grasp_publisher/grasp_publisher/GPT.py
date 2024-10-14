@@ -115,10 +115,10 @@ def gpt_dialogue(grasp_publisher):
             grasp_part = gpt_grasp_part(grasp_object)
     
             crop = True
-            original_image, cx, cy, w, h, height, width = detect_grasp_name(grasp_object, crop)
+            original_padding_image, cx, cy, w, h, height, width = detect_grasp_name(grasp_object, crop)
 
             crop = False
-            cx, cy, w, h = detect_grasp_name(grasp_part, crop, cx, cy, original_image, height, width)
+            cx, cy, w, h = detect_grasp_name(grasp_part, crop, cx, cy, original_padding_image, height, width)
             
             q_buf = ik.ik(cx, cy, w, h)
             grasp_publisher.grasp_publish(q_buf)
