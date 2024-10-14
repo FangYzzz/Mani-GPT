@@ -48,8 +48,8 @@ You need to apply a ChatGPT API key to integrate and use ChatGPT in your code. Y
 # Camera Calibration
 
 According to the measurement and repeated adjustments, we can get the rotation angle of the camera relative to the robot frame is 217 degrees around the X axis and 90 degrees around the Z axis.
----
-<img src="./assets/images/camera_calibration.jpg" alt="005" style="zoom: 70%;" />
+
+<img src="./assets/images/camera_calibration.jpg" alt="005" style="zoom: 50%;" />
 
 ```
 extrinsic_rotation_x = R.from_quat([0.948, 0, 0, -0.317]).as_matrix()                
