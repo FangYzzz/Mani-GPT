@@ -75,21 +75,20 @@ def get_parser():
     parser.add_argument(
         "--input",
         nargs="+",
-        default=['./src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image0.png'],                   
+        default=['./src/grasp_publisher/grasp_publisher/camera_capture/ZED_image0.png'],                   
                     
         help="A list of space separated input images; "
         "or a single glob pattern such as 'directory/*.jpg'",
     )
     parser.add_argument(
         "--output",
-        default='./src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image0_custom.png',             
+        default='./src/grasp_publisher/grasp_publisher/camera_capture/ZED_image0_custom.png',             
         help="A file or directory to save output visualizations. "
         "If not given, will show output in an OpenCV window.",
     )
     parser.add_argument(
         "--vocabulary",
-        # default="lvis",
-        # default="openimages",                                                                 
+        # default="lvis",                                                               
         default="custom",                                                                       
         choices=['lvis', 'openimages', 'objects365', 'coco', 'custom'],  
         help="",
@@ -140,7 +139,6 @@ def get_parser():
             "Bilberry, Biriba, Black sapote, Blood orange, Breadfruit, Buddha's hand, Cacao, Canistel, Carambola, Cempedak, Chayote, Chokeberry, Cloudberry, "
             "Cucumber, Cupuacu, Damson, Desert lime, Dodder laurel, Emblic, Finger lime, Gac, Galia melon, Genip, Giant granadilla, Granadilla, Greengage, "
             "Grosella, Hackberry, Hala fruit, Horned melon, Illawarra plum, Imbe, Boxed milk",
-        # default = "Spoon, Pepper, Carrot, Saucepan, Plate, Banana, eggplant, Tomato, Bowl, Cup",
         help="",
     )
     parser.add_argument("--pred_all_class", action='store_true')
@@ -277,8 +275,6 @@ def detect_exist_objects():
             output_file.release()
         else:
             cv2.destroyAllWindows()
-
-
 
 
     # print(labels_onlyclass)

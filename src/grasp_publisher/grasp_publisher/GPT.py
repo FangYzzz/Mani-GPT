@@ -58,7 +58,7 @@ def get_chatgpt_response(messages):
 def gpt_dialogue(grasp_publisher):
     openai.api_key = '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'
 
-    filepath = zed()                                                                           # 00000
+    filepath = zed()                                                                           
     
     message = [
     {"role": "system", "content": """
@@ -118,10 +118,10 @@ def gpt_dialogue(grasp_publisher):
             grasp_part = gpt_grasp_part(grasp_object)
     
             crop = True
-            original_padding_image, cx, cy, w, h, height, width = detect_grasp_name(grasp_object, crop)
+            original_image, cx, cy, w, h, height, width = detect_grasp_name(grasp_object, crop)
 
-            # crop = False
-            # cx, cy, w, h = detect_grasp_name(grasp_part, crop, cx, cy, original_padding_image, height, width)
+            crop = False
+            cx, cy, w, h = detect_grasp_name(grasp_part, crop, cx, cy, original_image, height, width)
             
             q_buf = ik.ik(cx, cy, w, h)
             grasp_publisher.grasp_publish(q_buf)

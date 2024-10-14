@@ -44,9 +44,9 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
 
     """# Plot predictions"""
 
-    score_threshold = 0.2   # initial 0.2
+    score_threshold = 0.2  
 
-    logits = predictions['pred_logits'][..., :len(text_queries)]       # Remove padding
+    logits = predictions['pred_logits'][..., :len(text_queries)]            # Remove padding
     scores = sigmoid(np.max(logits, axis=-1))
     labels = np.argmax(predictions['pred_logits'], axis=-1)
     boxes = predictions['pred_boxes']
@@ -64,7 +64,7 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
         cx, cy, w, h = box
         if crop == True:                       
             img_height, img_width, _ = input_image.shape
-            print("original padding image:", img_height, img_width)
+            print("original padding image:", img_height, img_width)         # input_image = original_padding_image
             print("crop = True: cx, cy, w, h: ", cx, cy, w, h)
             
             left = int((cx - w / 2) * img_width)
@@ -78,7 +78,7 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
             # Convert the cropped NumPy array to a Pillow image object
             cropped_image = Image.fromarray((cropped_image_array * 255).astype(np.uint8))
 
-            cropped_image.save(os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image0.png'))    
+            cropped_image.save(os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/cropped_image0.png'))    
 
             
             height_c, width_c,_= cropped_image_array.shape
@@ -88,7 +88,7 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
         
         else:
             cx, cy, w, h = box
-            # img_height, img_width, _ = input_image.shape
+            img_height, img_width, _ = input_image.shape
             img_height_, img_width_, _ = original_image.shape
             # print(img_height, img_width, img_height_, img_width_)
 
@@ -117,13 +117,10 @@ def prediction(module, variables, input_image, tokenized_queries, text_queries, 
                     'edgecolor': 'red',
                     'boxstyle': 'square,pad=.3'
                 })
-            plt.savefig(os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image0_1.png'))                     
+            plt.savefig(os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/cropped_image0_1.png'))                     
             
             # plt.show()  
             return cx, cy, w, h
-            
-        
-
 
 def detect_grasp_name(grasp_name, crop, cx_=0, cy_=0, original_padding_image=None, height=0, width=0):
 
@@ -149,11 +146,11 @@ def detect_grasp_name(grasp_name, crop, cx_=0, cy_=0, original_padding_image=Non
 
     # Load example image:
     if crop == True:
-        filename_input = os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/lab/ZED_image0.png')               
+        filename_input = os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/ZED_image0.png')               
 
         
     else:
-        filename_input = os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/lab/cropped_image0.png')         
+        filename_input = os.path.join('./src/grasp_publisher/grasp_publisher/camera_capture/cropped_image0.png')         
     
 
     image_uint8 = skimage_io.imread(filename_input)
@@ -179,11 +176,8 @@ def detect_grasp_name(grasp_name, crop, cx_=0, cy_=0, original_padding_image=Non
 
 
     """# Prepare text queries"""
-
-    # grasp_name = GPT.gpt_dialogue()                                               
-    text_queries = [grasp_name]                                             
-    # text_queries = ['fork']
-
+                                       
+    text_queries = [grasp_name]              
 
     tokenized_queries = np.array([
         module.tokenize(q, config.dataset_configs.max_query_length)
@@ -197,11 +191,11 @@ def detect_grasp_name(grasp_name, crop, cx_=0, cy_=0, original_padding_image=Non
         constant_values=0)
 
     if crop== True:
-        original_padding_image, cx, cy, w, h, height, width = prediction(module, variables, input_image, tokenized_queries, text_queries, crop)
-        return original_padding_image, cx, cy, w, h, height, width
+        original_image, cx, cy, w, h, height, width = prediction(module, variables, input_image, tokenized_queries, text_queries, crop)
+        return original_image, cx, cy, w, h, height, width
     else:
         ## sub fig
-        cx, cy, w, h = prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_, cy_, image, width_=width, height_=height)
+        cx, cy, w, h = prediction(module, variables, input_image, tokenized_queries, text_queries, crop, cx_, cy_, original_image, width_=width, height_=height)
         return cx, cy, w, h
 
 

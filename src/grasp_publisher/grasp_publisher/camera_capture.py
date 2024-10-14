@@ -9,7 +9,7 @@ import cv2
 help_string = "[s] Save side by side image [d] Save Depth, [n] Change Depth format, [p] Save Point Cloud, [m] Change Point Cloud format, [q] Quit"
 prefix_point_cloud = "Cloud_"
 prefix_depth = "Depth_"
-path = "./src/grasp_publisher/grasp_publisher/camera_capture/lab/"
+path = "./src/grasp_publisher/grasp_publisher/camera_capture/"
 # path = "./"
 
 count_save = 0
@@ -87,19 +87,19 @@ def process_key_event(zed, key) :
     global depth_format_ext
     global point_cloud_format_ext
 
-    if key == 100 or key == 68:                                         # Press 'd' to save Depth image
+    if key == 100 or key == 68:                                              # Press 'd' to save Depth image
         save_depth(zed, path + prefix_depth + str(count_save))
         count_save += 1
         return  path + prefix_depth + str(count_save)
-    elif key == 110 or key == 78:                                       # Press 'n' to switch Depth format
+    elif key == 110 or key == 78:                                            # Press 'n' to switch Depth format
         mode_depth += 1
         depth_format_ext = depth_format_name()
         print("Depth format: ", depth_format_ext)
-    elif key == 112 or key == 80:                                       # Press 'p' to save Point Cloud
+    elif key == 112 or key == 80:                                            # Press 'p' to save Point Cloud
         save_point_cloud(zed, path + prefix_point_cloud + str(count_save))
         count_save += 1
         return path + prefix_point_cloud + str(count_save)
-    elif key == 109 or key == 77:                                       # Press 'm' to switch Point Cloud format
+    elif key == 109 or key == 77:                                            # Press 'm' to switch Point Cloud format
         mode_point_cloud += 1
         point_cloud_format_ext = point_cloud_format_name()
         print("Point Cloud format: ", point_cloud_format_ext)
@@ -154,7 +154,7 @@ def zed():
         exit(1)
 
     # Display help in console
-    # print_help()                                                     # 0
+    # print_help()                                                     
 
     # Set runtime parameters after opening the camera
     runtime = sl.RuntimeParameters()
@@ -183,8 +183,6 @@ def zed():
             # It returns a numpy array that can be used as a matrix with opencv
             image_ocv = image_zed.get_data()
             depth_image_ocv = depth_image_zed.get_data()
-
-
 
             key = cv2.waitKey(10)
 

@@ -19,14 +19,14 @@ class GraspSubscriber : public rclcpp::Node
       // grasp(q_buf);
     }
     int grasp(std::array<double, 7> q_buf) {
-      // std::cerr << "grasps position:\n" << translation{};
-
       try {
         franka::Robot robot("192.168.2.55");
         franka::Gripper gripper("192.168.2.55");
         gripper.homing();
         franka::GripperState gripper_state = gripper.readOnce();
         double width_max = gripper_state.max_width;
+
+        // ***arm***
         setDefaultBehavior(robot);                                                                            
         // First move the robot to a suitable joint configuration
         std::array<double, 7> q_initial = {{0, -M_PI_4, 0, -3 * M_PI_4, 0, M_PI_2, M_PI_4}};                     
@@ -50,7 +50,6 @@ class GraspSubscriber : public rclcpp::Node
         // MotionGenerator motion_generator2(0.1, q_goal);
         // robot.control(motion_generator2);
 
-
         std::array<double, 7> q_goal = {{0, -M_PI_4, 0, -3 * M_PI_4, 0, M_PI_2, M_PI_4}};
 
         q_goal[0] = q_buf[0];
@@ -64,12 +63,8 @@ class GraspSubscriber : public rclcpp::Node
         MotionGenerator motion_generator1(0.1, q_goal);
         robot.control(motion_generator1);
 
-        
-     
-
-        
-
-        double grasping_width =0.04;
+        // ***gripper***
+        double grasping_width = 0.04;
         bool homing;
       
         // gripper.homing();
@@ -96,7 +91,6 @@ class GraspSubscriber : public rclcpp::Node
 
           return -1;
         }
-        // gripper.stop();
         // Wait 3s and check afterwards, if the object is still grasped.
         std::this_thread::sleep_for(std::chrono::duration<double, std::milli>(3000));
         gripper_state = gripper.readOnce();
@@ -110,16 +104,12 @@ class GraspSubscriber : public rclcpp::Node
           return -1;
         }
         std::cerr << "Grasped object, will release it now." << std::endl;
-        // gripper.stop();
-
-        
 
         std::array<double, 7> q_initial1 = {{0, -M_PI_4, 0, -3 * M_PI_4, 0, M_PI_2, M_PI_4}};  
         MotionGenerator motion_generator3(0.1, q_initial1);  
         robot.control(motion_generator3);
         gripper.move(width_max, 0.1);  
         gripper.stop();
-        // gripper.homing();
         
       } catch (const franka::Exception& e) { 
         std::cout << e.what() << std::endl;
@@ -133,16 +123,10 @@ class GraspSubscriber : public rclcpp::Node
       for(int i=0; i<3; i++){      
         std::array<double, 7> q_buf = msg->q_buf[i].joint_pos;
         int r = grasp(q_buf);
-
       }
-      // std::cerr<<"sucess!!!!!!\n\n\n\n\n";
-
     }
     rclcpp::Subscription<grasp_msg::msg::GraspMessage>::SharedPtr subscription_;
 };
-
-
-
 
 int main(int argc, char * argv[])
 {
