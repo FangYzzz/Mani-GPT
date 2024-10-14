@@ -98,7 +98,6 @@ def get_GraspSample(rect_cx, rect_cy, rect_w, rect_h):
 
     num_parallel_workers = 1
     num_grasps = 30
-
     sampler = GpgGraspSamplerPcl(0.05)                                                           # Franka finger depth is actually a little less than 0.05m
 
     grasps, grasps_trans, grasps_rot = sampler.sample_grasps_parallel(point_cloud, 
